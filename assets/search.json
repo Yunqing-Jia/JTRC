@@ -1,0 +1,66 @@
+---
+permalink: search.json
+---
+[
+{% for section in site.data.docs %}
+  {% for item in section.docs %}
+    {% assign item_url = item | prepend:"/docs/" | append:"/" %}
+    {% assign p = site.docs | where:"url", item_url | first %}
+    {
+      "title": "{{ p.title }}",
+      "url": "{{ p.url | relative_url }}"
+    },
+  {% endfor %}
+{% endfor %}
+
+{% for section in site.data.introduction %}
+  {% for item in section.introduction %}
+    {% assign item_url = item | prepend:"/introduction/" | append:"/" %}
+    {% assign p = site.introduction | where:"url", item_url | first %}
+    {
+      "title": "{{ p.title }}",
+      "url": "{{ p.url | relative_url }}"
+    },
+  {% endfor %}
+{% endfor %}
+
+{% for section in site.data.jmtr %}
+  {% for item in section.jmtr %}
+    {% assign item_url = item | prepend:"/jmtr/" | append:"/" %}
+    {% assign p = site.jmtr | where:"url", item_url | first %}
+    {
+      "title": "{{ p.title }}",
+      "url": "{{ p.url | relative_url }}"
+    },
+  {% endfor %}
+{% endfor %}
+
+{% for section in site.data.jmts %}
+  {% for item in section.jmts %}
+    {% assign item_url = item | prepend:"/jmts/" | append:"/" %}
+    {% assign p = site.jmts | where:"url", item_url | first %}
+    {
+      "title": "{{ p.title }}",
+      "url": "{{ p.url | relative_url }}"
+    },
+  {% endfor %}
+{% endfor %}
+
+{% for section in site.data.more %}
+  {% for item in section.more %}
+    {% assign item_url = item | prepend:"/more/" | append:"/" %}
+    {% assign p = site.more | where:"url", item_url | first %}
+    {
+      "title": "{{ p.title }}",
+      "url": "{{ p.url | relative_url }}"
+    },
+  {% endfor %}
+{% endfor %}
+
+  {% for post in site.posts %}
+  {
+  "title": "{{ post.title | escape }}",
+  "url": "{{ post.url | relative_url }}"
+  }{% unless forloop.last %},{% endunless %}
+  {% endfor %}
+]
