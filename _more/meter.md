@@ -12,8 +12,9 @@ font-size:21px;
 </style>
 
 ### JTRC Webpage Visitors Statistics
+
 <div style="width: 200px; height: 200px; overflow: hidden; position: relative;">
-  <script type="text/javascript" id="clstr_globe" src="//clustrmaps.com/globe.js?d=g8Lfxn9R7bJMgBp60QNt8vYkoTwb3VExT5t1q3uL_mM"></script>
+<script type="text/javascript" id="clstr_globe" src="//clustrmaps.com/globe.js?d=9vq5poeNagJCJ7zKG0b-WOSUP-3-3EUyXuXlBCqKzp8"></script>
 </div>
 
 ### Github Activity Metrics
