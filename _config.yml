@@ -1,0 +1,107 @@
+# Site settings
+title: Yunqing-Jia | JTRC
+email: Jerland@outlook.com
+description: >
+  Yunqing-Jia's personal webpage in transport.
+  Collector of TRansport, Jerland (JTRC).
+lang: en-US
+
+baseurl: "/Jerland" # the subpath of your site, e.g. /blog/
+url: https://yunqing-jia.github.io/Jerland/ # the base hostname & protocol for your site
+git_address: https://github.com/Yunqing-Jia/Jerland
+git_edit_address: https://github.com/Yunqing-Jia/Jerland/tree/gh-pages
+
+# theme options from https://bootswatch.com/3/
+# comment out this to use default Bootstrap
+bootwatch: cerulean # paper cosmo custom cyborg darkly flatly journal lumen readable sandstone simplex slate solar spacelab superhero united yeti
+
+# Build settings
+markdown: kramdown
+highlighter: rouge
+# Plugins (previously gems:)
+plugins:
+  - jekyll-feed
+  - jekyll-redirect-from
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - .idea/
+  - .gitignore
+  - README.md
+  - vendor
+timezone: Europe/Berlin
+defaults:
+- scope:
+    path: _posts
+    type: posts
+  values:
+    layout: post
+    sectionid: blog
+
+- scope:
+    path: _docs
+    type: docs
+  values:
+    layout: docs
+    sectionid: docs
+    seo:
+      type: "WebPage"
+
+- scope:
+    path: _introduction
+    type: introduction
+  values:
+    layout: introduction
+    sectionid: introduction
+    seo:
+      type: "WebPage"
+
+- scope:
+    path: _jmtr
+    type: jmtr
+  values:
+    layout: jmtr
+    sectionid: jmtr
+    seo:
+      type: "WebPage"
+
+- scope:
+    path: _jmts
+    type: jmts
+  values:
+    layout: jmts
+    sectionid: jmts
+    seo:
+      type: "WebPage"
+
+- scope:
+    path: _more
+    type: more
+  values:
+    layout: more
+    sectionid: more
+    seo:
+      type: "WebPage"      
+
+collections:
+  docs:
+    permalink: /:collection/:path/
+    output: true
+  introduction:
+    permalink: /:collection/:path/
+    output: true  
+  jmtr:
+    permalink: /:collection/:path/
+    output: true  
+  jmts:
+    permalink: /:collection/:path/
+    output: true
+  more:
+    permalink: /:collection/:path/
+    output: true    
+  posts:
+    permalink: /blog/:year/:month/:day/:title/
+    output: true
