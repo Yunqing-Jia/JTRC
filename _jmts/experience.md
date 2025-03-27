@@ -29,17 +29,17 @@ font-size:21px;
 <div class="container">
     <div class="row">
         <div class="col-md-4">
-          <img src="/Jerland/jmts/jmts_2202.png" class="center" width='300' height='300'>
+          <img src="/JTRC/jmts/jmts_2202.png" class="center" width='300' height='300'>
         </div>
         <div class="col-md-5">
             <div class="intro">
             <p>Project code: JMTS_2202</p>
             <p>Project type: research program motivation</p>
-            <p>Affiliated research program: <a href="https://yunqing-jia.github.io/Jerland/jmtr/researchtopic/#JMTR_2107">JMTR_2107</a></p>
+            <p>Affiliated research program: <a href="https://yunqing-jia.github.io/JTRC/jmtr/researchtopic/#JMTR_2107">JMTR_2107</a></p>
             <p>Open access files: </p>
             <a href="https://github.com/Yunqing-Jia/JMTS_2202" class="btn btn-info active" aria-pressed="true">Code</a>
-            <a href="https://yunqing-jia.github.io/Jerland/jmts/JMTS_2202_1_0R.pdf" target="_blank" class="btn btn-primary active" aria-pressed="true">Report</a>
-            <a href="https://yunqing-jia.github.io/Jerland/jmts/JMTS_2202_1_0M.pdf" target="_blank" class="btn btn-success active" aria-pressed="true">Manual</a>
+            <a href="https://yunqing-jia.github.io/JTRC/jmts/JMTS_2202_1_0R.pdf" target="_blank" class="btn btn-primary active" aria-pressed="true">Report</a>
+            <a href="https://yunqing-jia.github.io/JTRC/jmts/JMTS_2202_1_0M.pdf" target="_blank" class="btn btn-success active" aria-pressed="true">Manual</a>
             </div>
         </div>
     </div>
@@ -52,7 +52,7 @@ font-size:21px;
 <div class="container">
     <div class="row">
         <div class="col-md-4">
-          <img src="/Jerland/jmts/jmtr_2021.png" class="center" width='350' height='350'>
+          <img src="/JTRC/jmts/jmtr_2021.png" class="center" width='350' height='350'>
         </div>
         <div class="col-md-5">
             <div class="intro">
@@ -60,7 +60,7 @@ font-size:21px;
             <p>Funding: National Innovation and Entrepreneurship Training Program for Undergraduates of China under Grant No. 201810710008 (Role: PI)</p>
             <p>Funding name: Traffic signal timing optimization based on field data </p>
             <p>Duration: 2018.7 - 2020.6 </p>
-            <p>Affiliated research program: <a href="https://yunqing-jia.github.io/Jerland/jmtr/thesis/#JMTR_2021">JMTR_2021</a> </p>
+            <p>Affiliated research program: <a href="https://yunqing-jia.github.io/JTRC/jmtr/thesis/#JMTR_2021">JMTR_2021</a> </p>
             </div>
         </div>
     </div>
@@ -74,7 +74,7 @@ font-size:21px;
 <div class="container">
     <div class="row">
         <div class="col-md-4">
-          <img src="/Jerland/jmts/jmts_2002.png" class="center" width='250' height='250'>
+          <img src="/JTRC/jmts/jmts_2002.png" class="center" width='250' height='250'>
         </div>
         <div class="col-md-5">
             <div class="intro">
@@ -95,7 +95,7 @@ font-size:21px;
 <div class="container">
     <div class="row">
         <div class="col-md-4">
-          <img src="/Jerland/jmts/jmts_1907.png" class="center" width='350' height='350'>
+          <img src="/JTRC/jmts/jmts_1907.png" class="center" width='350' height='350'>
         </div>
         <div class="col-md-5">
             <div class="intro">
@@ -117,7 +117,7 @@ font-size:21px;
 <div class="container">
     <div class="row">
         <div class="col-md-4">
-          <img src="/Jerland/jmts/jmts_1909.png" class="center" width='350' height='350'>
+          <img src="/JTRC/jmts/jmts_1909.png" class="center" width='350' height='350'>
         </div>
         <div class="col-md-5">
             <div class="intro">
@@ -137,7 +137,7 @@ font-size:21px;
 <div class="container">
     <div class="row">
         <div class="col-md-4">
-          <img src="/Jerland/jmts/jmts_2110.png" class="center" width='350' height='350'>
+          <img src="/JTRC/jmts/jmts_2110.png" class="center" width='350' height='350'>
         </div>
         <div class="col-md-5">
             <div class="intro">
@@ -157,7 +157,7 @@ font-size:21px;
 <div class="container">
     <div class="row">
         <div class="col-md-4">
-          <img src="/Jerland/jmts/jmts_2204.png" class="center" width='350' height='350'>
+          <img src="/JTRC/jmts/jmts_2204.png" class="center" width='350' height='350'>
         </div>
         <div class="col-md-5">
             <div class="intro">
