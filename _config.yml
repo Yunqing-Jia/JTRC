@@ -1,6 +1,6 @@
 # Site settings
 title: Yunqing-Jia | JTRC
-email: Jerland@outlook.com
+email: Jonlaind@outlook.com
 description: >
   Yunqing-Jia's personal webpage in transport.
   Collector of TRansport, Jerland (JTRC).
@@ -32,7 +32,7 @@ exclude:
   - .gitignore
   - README.md
   - vendor
-timezone: Europe/Berlin
+timezone: CET
 defaults:
 - scope:
     path: _posts
