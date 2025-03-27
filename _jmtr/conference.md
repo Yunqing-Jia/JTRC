@@ -27,10 +27,10 @@ Research Board (TRB 2024 Annual Meeting)</i>, January 7-11, 2024, Washington, D.
   <a href="#" class="btn btn-primary active dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></a>
   <ul class="dropdown-menu">
     <li><a href="https://ascelibrary.org/doi/10.1061/9780784484869.214">ASCE Library</a></li>
-    <li><a href="https://yunqing-jia.github.io/Jerland/assets/JMTR_2204Paper.pdf">Github</a></li>
+    <li><a href="https://yunqing-jia.github.io/JTRC/assets/JMTR_2204Paper.pdf">Github</a></li>
   </ul>
 </div>
-<a href="https://yunqing-jia.github.io/Jerland/jmtr/JMTR_2204S.pdf" class="btn btn-success active" aria-pressed="true">Slide</a>
+<a href="https://yunqing-jia.github.io/JTRC/jmtr/JMTR_2204S.pdf" class="btn btn-success active" aria-pressed="true">Slide</a>
 <a href="https://github.com/Yunqing-Jia/JMTR_2204C" class="btn btn-info active" aria-pressed="true">Code</a>
 </div>
 
@@ -55,8 +55,8 @@ Research Board (TRB 2024 Annual Meeting)</i>, January 7-11, 2024, Washington, D.
   <a href="#" class="btn btn-warning active" aria-pressed="true">Video</a>
   <a href="#" class="btn btn-warning active dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></a>
   <ul class="dropdown-menu">
-    <li><a href="https://yunqing-jia.github.io/Jerland/assets/JMTR_2019V1.mp4">Video 1</a></li>
-    <li><a href="https://yunqing-jia.github.io/Jerland/assets/JMTR_2019V2.mp4">Video 2</a></li>
+    <li><a href="https://yunqing-jia.github.io/JTRC/assets/JMTR_2019V1.mp4">Video 1</a></li>
+    <li><a href="https://yunqing-jia.github.io/JTRC/assets/JMTR_2019V2.mp4">Video 2</a></li>
   </ul>
 </div>
 </div>
