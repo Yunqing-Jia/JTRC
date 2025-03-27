@@ -37,12 +37,12 @@ font-size:21px;
       <td> </td>
       <td> </td>
       <td>JMTR_2305</td>
-      <td><a href="https://yunqing-jia.github.io/Jerland/jmtr/thesis/#JMTR_2021">JMTR_2021</a></td>
+      <td><a href="https://yunqing-jia.github.io/JTRC/jmtr/thesis/#JMTR_2021">JMTR_2021</a></td>
     </tr>
     <tr class="info">
       <td> </td>
       <td> </td>
-      <td><a href="https://yunqing-jia.github.io/Jerland/jmts/experience/#jmts_2202">(JMTS_2202)</a></td>
+      <td><a href="https://yunqing-jia.github.io/JTRC/jmts/experience/#jmts_2202">(JMTS_2202)</a></td>
       <td><a href="#JMTR_2020">JMTR_2020</a></td>
     </tr>
     <tr class="info">
@@ -62,7 +62,7 @@ font-size:21px;
 <div class="container">
     <div class="row">
     <div class="col-md-9">
-          <img src="/Jerland/jmtr/mtfm_ind.png" class="center" width='900'>
+          <img src="/JTRC/jmtr/mtfm_ind.png" class="center" width='900'>
     </div>
     </div>
     <div class="row">
@@ -83,7 +83,7 @@ font-size:21px;
 <div class="container">
     <div class="row">
         <div class="col-md-4">
-          <img src="/Jerland/jmtr/rts_ind.png" class="center" width='350' height='350'>
+          <img src="/JTRC/jmtr/rts_ind.png" class="center" width='350' height='350'>
         </div>
         <div class="col-md-5">
             <div class="intro">
@@ -102,7 +102,7 @@ font-size:21px;
 </ul>
 <div id="myTabContent" class="tab-content">
   <div class="tab-pane fade active in" id="rtshome">
-    <img src="/Jerland/jmtr/rts_gan.png">
+    <img src="/JTRC/jmtr/rts_gan.png">
     <br>
     <p><div style="font-size: 16px;"> JMTR_2204: Joint optimization of TOD intervals and robust signal timing for isolated intersection. </div></p>
     <p><div style="font-size: 14px;"> Keywords: Bi-level optimization, Arrival-departure curve, BLEAQ_II algorithm, SUMO. </div></p>
@@ -120,7 +120,7 @@ font-size:21px;
 <div class="container">
     <div class="row">
         <div class="col-md-4">
-          <img src="/Jerland/jmtr/cll_ind.png" class="center" width='350' height='350'>
+          <img src="/JTRC/jmtr/cll_ind.png" class="center" width='350' height='350'>
         </div>
         <div class="col-md-5">
             <div class="intro">
@@ -142,7 +142,7 @@ font-size:21px;
 </ul>
 <div id="myTabContent" class="tab-content">
   <div class="tab-pane fade active in" id="cll">
-    <img src="/Jerland/jmtr/cll_gan.png">
+    <img src="/JTRC/jmtr/cll_gan.png">
     <br>
     <p><div style="font-size: 16px;">JMTR_2019: Traffic signal optimization for the isolated intersection with CLL </div></p>
     <p><div style="font-size: 14px;"> Keywords: queue accumulation polygon, Genetic algorithm. </div></p>
