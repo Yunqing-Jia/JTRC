@@ -9,7 +9,7 @@ lang: en-US
 #baseurl: https://yunqing-jia.github.io/JTRC/ # the subpath of your site, e.g. /blog/
 url: https://yunqing-jia.github.io/JTRC/ # the base hostname & protocol for your site
 git_address: https://github.com/Yunqing-Jia/JTRC
-git_edit_address: https://github.com/Yunqing-Jia/JTRC/main
+git_edit_address: https://github.com/Yunqing-Jia/JTRC/tree/main
 
 # theme options from https://bootswatch.com/3/
 # comment out this to use default Bootstrap
