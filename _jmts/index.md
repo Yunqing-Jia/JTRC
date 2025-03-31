@@ -29,4 +29,4 @@ font-size:21px;
 The following figure illustrates the basic structure of JMTS.
 </div>
 <br>
-<img src="/Jerland/jmts/JMTS.jpg">
+<img src="/JTRC/jmts/JMTS.jpg">
