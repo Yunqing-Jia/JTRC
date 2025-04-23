@@ -31,14 +31,13 @@ font-size:15px;
 JCAI supervises and ensures that all activities of JTRC adhere to the following academic ethical standards: 
 </div>
 
-Code of Conduct of TU Graz on law-abiding and ethical behavior
 <p>
 <div class="introh">
-        I. As an Employee:
+        I. As an employee:
 </div>
-<div class="introt">
-        i. Code of Conduct of TU Graz on law-abiding and ethical behavior (2025.03 - )
-</div>
+<ul class="introt">
+  <li>i. Code of Conduct of TU Graz on law-abiding and ethical behavior (2025.03 - )</li>
+</ul>
 </p>
 <br>
   
@@ -58,9 +57,9 @@ Code of Conduct of TU Graz on law-abiding and ethical behavior
 <div class="introh">
   III. As a programmer:
 </div>
-<div class="introt">
-        i. <a href="https://gist.github.com/nicolasdao/a7adda51f2f185e8d2700e1573d8a633">Coding</a>
-</div>
+<ul class="introt">
+  <li><a href="https://gist.github.com/nicolasdao/a7adda51f2f185e8d2700e1573d8a633" target="_blank">i. Open source license</a></li>
+</ul>
 </p>
 <br>
 </div>
