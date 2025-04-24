@@ -87,7 +87,7 @@ JCAI supervises and ensures that all activities of JTRC (JLRC) adhere to the fol
 
 <br>
 
-<div class="panel panel-warning">
+<div class="panel panel-success">
 <div class="panel-heading">
 <h3 class="panel-title" style="font-weight: bold;">Stationed Inspection Object of JMTR, JMTS, JMOT, JMOI, JMOE, JMOL (Dispatched by JNSC)</h3>
 </div>
