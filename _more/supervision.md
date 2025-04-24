@@ -24,26 +24,46 @@ font-size:15px;
 
 <div class="panel panel-success">
 <div class="panel-heading">
-<h3 class="panel-title">JNSC Collector of Academic Integrity (JCAI)</h3>
+<h3 class="panel-title" style="font-weight: bold;">JNSC Collector of Academic Integrity (JCAI)</h3>
 </div>
 <div class="panel-body">
 <div class="introh">
-JCAI supervises and ensures that all activities of JTRC adhere to the following academic ethical standards: 
+JCAI supervises and ensures that all activities of JTRC (JLRC) adhere to the following academic ethical standards: 
 </div>
 
 <p>
 <div class="introh">
-        I. As an employee:
+   I. As a researcher:
+</div>
+<ul class="introt">
+  <li><a href="https://allea.org/wp-content/uploads/2023/06/European-Code-of-Conduct-Revised-Edition-2023.pdf" target="_blank">i. The European Code of Conduct for Research Integrity - REVISED EDITION 2023</a></li>
+</ul>
+</p>
+<br>
+
+<p>
+<div class="introh">
+    II. As an employee:
 </div>
 <ul class="introt">
   <li>i. Code of Conduct of TU Graz on law-abiding and ethical behavior (2025.03 - )</li>
 </ul>
 </p>
 <br>
+
+<p>
+<div class="introh">
+  III. As a student:
+</div>
+<ul class="introt">
+  <li>-</li>
+</ul>
+</p>
+<br>
   
 <p>
 <div class="introh">
-  II. As an author for publication:
+  IV. As an author for publication:
 </div>
 <ul class="introt">
   <li><a href="https://www.elsevier.com/about/policies-and-standards/publishing-ethics#4-duties-of-authors" target="_blank">i. Elsevier</a></li>
@@ -55,12 +75,27 @@ JCAI supervises and ensures that all activities of JTRC adhere to the following 
 
 <p>
 <div class="introh">
-  III. As a programmer:
+  V. As a programmer:
 </div>
 <ul class="introt">
   <li><a href="https://gist.github.com/nicolasdao/a7adda51f2f185e8d2700e1573d8a633" target="_blank">i. Open source license</a></li>
 </ul>
 </p>
 <br>
+</div>
+</div>
+
+<br>
+
+<div class="panel panel-warning">
+<div class="panel-heading">
+<h3 class="panel-title" style="font-weight: bold;">Stationed Inspection Object of JMTR, JMTS, JMOT, JMOI, JMOE, JMOL (Dispatched by JNSC)</h3>
+</div>
+<div class="panel-body">
+<div class="introh">
+
+</div>
+
+
 </div>
 </div>
