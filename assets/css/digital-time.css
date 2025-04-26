@@ -1,6 +1,11 @@
+@font-face {
+    font-family: 'Digital-7';
+    src: url('/assets/fonts/digital-7.ttf') format('truetype');
+  }
+
 .digital-time {
-    font-family: 'Courier New', Courier, monospace;
-    font-size: 48px;
+    font-family: 'Digital-7', monospace;
+    font-size: 25px;
     color: #19257d;
     background-color: white;
     padding: 10px 20px;
