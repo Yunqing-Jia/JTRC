@@ -1,10 +1,21 @@
-function updateClock() {
-    const now = new Date();
-    const hours = String(now.getHours()).padStart(2, '0');
-    const minutes = String(now.getMinutes()).padStart(2, '0');
-    const seconds = String(now.getSeconds()).padStart(2, '0');
-    document.getElementById('clock').textContent = `${hours}:${minutes}:${seconds}`;
-  }
+const cities = [
+    { id: 'time-beijing', label: 'Beijing', timeZone: 'Asia/Shanghai' },
+    { id: 'time-vienna', label: 'Vienna', timeZone: 'Europe/Vienna' }
+  ];
   
-  setInterval(updateClock, 1000);
-  updateClock(); 
+function updateClocks() {
+  const now = new Date();
+  cities.forEach(city => {
+    const cityTime = now.toLocaleTimeString('en-US', {
+      timeZone: city.timeZone,
+      hour12: false,
+      hour: '2-digit',
+      minute: '2-digit',
+      second: '2-digit'
+    });
+    document.getElementById(city.id).textContent = `${city.label}: ${cityTime}`;
+  });
+}
+
+setInterval(updateClocks, 1000);
+updateClocks();
