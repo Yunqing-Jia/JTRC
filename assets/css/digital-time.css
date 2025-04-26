@@ -9,7 +9,8 @@
     color: #19257d;
     background-color: white;
     padding: 10px 20px;
-    display: inline-block;
+    display: block;
+    width: fit-content;
     border-radius: 8px;
     letter-spacing: 2px;
     margin: 20px auto;
