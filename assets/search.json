@@ -8,6 +8,7 @@ permalink: search.json
     {% assign p = site.docs | where:"url", item_url | first %}
     {
       "title": "{{ p.title }}",
+      "content": "{{ p.content | strip_html | strip_newlines | escape }}",
       "url": "{{ p.url | relative_url }}"
     },
   {% endfor %}
@@ -19,6 +20,7 @@ permalink: search.json
     {% assign p = site.introduction | where:"url", item_url | first %}
     {
       "title": "{{ p.title }}",
+      "content": "{{ p.content | strip_html | strip_newlines | escape }}",
       "url": "{{ p.url | relative_url }}"
     },
   {% endfor %}
@@ -30,6 +32,7 @@ permalink: search.json
     {% assign p = site.jmtr | where:"url", item_url | first %}
     {
       "title": "{{ p.title }}",
+      "content": "{{ p.content | strip_html | strip_newlines | escape }}",
       "url": "{{ p.url | relative_url }}"
     },
   {% endfor %}
@@ -41,6 +44,7 @@ permalink: search.json
     {% assign p = site.jmts | where:"url", item_url | first %}
     {
       "title": "{{ p.title }}",
+      "content": "{{ p.content | strip_html | strip_newlines | escape }}",
       "url": "{{ p.url | relative_url }}"
     },
   {% endfor %}
@@ -52,6 +56,7 @@ permalink: search.json
     {% assign p = site.more | where:"url", item_url | first %}
     {
       "title": "{{ p.title }}",
+      "content": "{{ p.content | strip_html | strip_newlines | escape }}",
       "url": "{{ p.url | relative_url }}"
     },
   {% endfor %}
@@ -60,6 +65,7 @@ permalink: search.json
   {% for post in site.posts %}
   {
   "title": "{{ post.title | escape }}",
+  "content": "{{ p.content | strip_html | strip_newlines | escape }}",
   "url": "{{ post.url | relative_url }}"
   }{% unless forloop.last %},{% endunless %}
   {% endfor %}
