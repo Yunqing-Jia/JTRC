@@ -21,61 +21,122 @@ This webpage is reserved for visualizing countries and cities Yunqing Jia has vi
 <!-- Map container -->
 <div id="map" style="width: 100%; height: 80vh;"></div>
 
+<!-- Controls -->
+<div style="margin: 10px;">
+  <label for="yearSlider">Year:</label>
+  <input type="range" id="yearSlider" min="1997" max="2025" step="1" value="1997">
+  <span id="yearLabel">ALL</span>
+</div>
+
+<!-- Legend -->
+<div id="legend" style="background: white; padding: 8px; border: 1px solid #ccc; position: absolute; bottom: 10px; right: 10px; z-index: 1000; font-size: 14px;">
+  <b>Legend:</b><br>
+  <span style="color: green;">●</span> First visit<br>
+  <span style="color: orange;">●</span> Revisit
+</div>
+
 <!-- Leaflet CSS & JS -->
 <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
 <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
 
 <script>
-  // Initialize the map centered at China
-  const map = L.map('map').setView([35.8617, 104.1954], 4);
+  // Initialize map centered globally
+  const map = L.map('map').setView([20, 0], 2);
 
-  // Use a light blue basemap (CartoDB Positron)
+  // Light blue basemap
   L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {
     attribution: '&copy; OpenStreetMap contributors &copy; CARTO',
     subdomains: 'abcd',
     maxZoom: 19
   }).addTo(map);
 
-  // List of visited cities with year
+  // Reference city (Mudanjiang)
+  const mudanjiang = { name: 'Mudanjiang', coords: [44.586111, 129.599444] };
+
+  // Visited cities data
   const visitedCities = [
-    { name: 'Beijing', coords: [39.9042, 116.4074], year: 2013 },
-    { name: 'Shanghai', coords: [31.2304, 121.4737], year: 2010 },
-    { name: 'Nanjing', coords: [23.1291, 113.2644], year: 2019 },
-    { name: 'Chengdu', coords: [30.5728, 104.0668], year: 2018 },
-    { name: 'Xi\'an', coords: [34.3416, 108.9398], year: 2017 },
-    { name: 'Shenzhen', coords: [22.5431, 114.0579], year: 2014 }
+    { name: 'Beijing', coords: [39.9042, 116.4074], years: [2013, 2017, 2020] },
+    { name: 'Shanghai', coords: [31.2304, 121.4737], years: [2010] },
+    { name: 'Nanjing', coords: [32.0603, 118.7969], years: [2019, 2021] },
+    { name: 'Chengdu', coords: [30.5728, 104.0668], years: [2018] },
+    { name: 'Xi\'an', coords: [34.3416, 108.9398], years: [2017, 2022] },
+    { name: 'Shenzhen', coords: [22.5431, 114.0579], years: [2014, 2015, 2019] },
+    { name: 'Mudanjiang', coords: [44.586111, 129.599444], years: Array.from({length:2025-1999+1}, (_,i)=>1999+i) } // Every year
   ];
 
-  // Sort cities by year (optional: for time sequence)
-  visitedCities.sort((a, b) => a.year - b.year);
+  // Store markers & lines for later control
+  const markers = [];
+  const lines = [];
 
-  // Add markers with year info
-  visitedCities.forEach((city, index) => {
-    L.circleMarker(city.coords, {
+  // Create markers and lines
+  visitedCities.forEach(city => {
+    const firstVisitYear = Math.min(...city.years);
+    const isMultiple = city.years.length > 1;
+
+    // marker color: green = first visit only, orange = multiple visits
+    const markerColor = isMultiple ? 'orange' : 'green';
+
+    const marker = L.circleMarker(city.coords, {
       radius: 8,
-      color: 'blue',
-      fillColor: 'skyblue',
-      fillOpacity: 0.7
+      color: markerColor,
+      fillColor: markerColor,
+      fillOpacity: 0.8
     })
-    .bindPopup(`<b>${city.name}</b><br>Visited in ${city.year}`)
+    .bindPopup(`<b>${city.name}</b><br>Visited: ${city.years.join(', ')}`)
     .addTo(map);
+
+    markers.push({ marker, city });
+
+    // skip drawing line to self
+    if (city.name !== mudanjiang.name) {
+      const line = L.polyline([mudanjiang.coords, city.coords], {
+        color: 'blue',
+        weight: 2,
+        opacity: 0.5
+      }).addTo(map);
+      lines.push({ line, city });
+    }
   });
 
-  // Optionally connect cities with a polyline to show travel timeline
-  const cityCoords = visitedCities.map(city => city.coords);
-  const polyline = L.polyline(cityCoords, { color: 'blue', weight: 3, opacity: 0.7 }).addTo(map);
+  // Fit map to show all markers
+  const allCoords = visitedCities.map(c => c.coords);
+  map.fitBounds(allCoords);
 
-  // Fit map to bounds
-  map.fitBounds(polyline.getBounds());
+  // Year slider event
+  const slider = document.getElementById('yearSlider');
+  const label = document.getElementById('yearLabel');
 
-  // Show current location (if user allows geolocation)
-  if (navigator.geolocation) {
-    navigator.geolocation.getCurrentPosition(position => {
-      const userCoords = [position.coords.latitude, position.coords.longitude];
-      L.marker(userCoords)
-        .bindPopup('You are here!')
-        .addTo(map)
-        .openPopup();
+  slider.addEventListener('input', function() {
+    const year = parseInt(this.value);
+    if (year === 1997) {
+      label.textContent = 'ALL';
+      updateMapByYear('ALL');
+    } else {
+      label.textContent = year;
+      updateMapByYear(year);
+    }
+  });
+
+  function updateMapByYear(selectedYear) {
+    markers.forEach(({ marker, city }) => {
+      const show = (selectedYear === 'ALL') || city.years.includes(selectedYear);
+      if (show) {
+        marker.addTo(map);
+      } else {
+        map.removeLayer(marker);
+      }
+    });
+
+    lines.forEach(({ line, city }) => {
+      const show = (selectedYear === 'ALL') || city.years.includes(selectedYear);
+      if (show) {
+        line.addTo(map);
+      } else {
+        map.removeLayer(line);
+      }
     });
   }
+
+  // Default: show all
+  updateMapByYear('ALL');
 </script>
