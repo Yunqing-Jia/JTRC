@@ -47,9 +47,9 @@ This webpage is reserved for visualizing countries and cities Yunqing Jia has vi
   gap: 4px;
 ">
   <div><i class="fa fa-home" style="color: rgb(97,170,227);"></i> Mudanjiang</div>
-  <div><i class="fa fa-book" style="color: black;"></i> Higher Education</div>
   <div><span style="color: rgb(224,255,255);">●</span> First Visit</div>
-  <div><span style="color: blue;">●</span> Multiple Visits</div>
+  <div><span style="color: rgb(25,25,112);">●</span> Multiple Visits</div>
+  <div></div>
 </div>
 
 <!-- Leaflet CSS & JS -->
@@ -83,23 +83,14 @@ This webpage is reserved for visualizing countries and cities Yunqing Jia has vi
   const lines = [];
 
   visitedCities.forEach(city => {
-    const firstVisitYear = Math.min(...city.years);
+    const isMudanjiang = city.name === mudanjiang.name;
     const isMultiple = city.years.length > 1;
 
     let marker;
-    if (city.name === mudanjiang.name) {
+    if (isMudanjiang) {
       marker = L.marker(city.coords, {
         icon: L.divIcon({
           html: '<i class="fa fa-home fa-2x" style="color: rgb(97,170,227);"></i>',
-          className: '',
-          iconSize: [24, 24],
-          iconAnchor: [12, 24]
-        })
-      });
-    } else if (['Xi\'an', 'Nanjing'].includes(city.name)) {
-      marker = L.marker(city.coords, {
-        icon: L.divIcon({
-          html: '<i class="fa fa-book fa-2x" style="color: black;"></i>',
           className: '',
           iconSize: [24, 24],
           iconAnchor: [12, 24]
@@ -122,7 +113,7 @@ This webpage is reserved for visualizing countries and cities Yunqing Jia has vi
 
     markers.push({ marker, city });
 
-    if (city.name !== mudanjiang.name) {
+    if (!isMudanjiang) {
       const line = L.polyline([mudanjiang.coords, city.coords], {
         color: 'rgb(135,206,235)',
         weight: 1.2,
