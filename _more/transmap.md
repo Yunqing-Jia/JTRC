@@ -16,14 +16,8 @@ font-size:21px;
 
 <ul style="list-style-type: disc; padding-left: 20px;">
   <li>JMOT_2505 (JMOI_2505A) Project powered by Leaflet & OpenStreetMap</li>
-  <li>Last modified on <span id="lastModified"></span></li>
+  <li>Last modified on May 1st, 2025</span></li>
 </ul>
-
-<script>
-  const today = new Date();
-  const formatted = today.toLocaleDateString('en-CA'); // YYYY-MM-DD
-  document.getElementById('lastModified').textContent = formatted;
-</script>
 
 <br>
 
