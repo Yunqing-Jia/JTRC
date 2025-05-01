@@ -73,8 +73,15 @@ This webpage is reserved for visualizing countries and cities Yunqing Jia has vi
     const firstVisitYear = Math.min(...city.years);
     const isMultiple = city.years.length > 1;
 
-    // marker color: green = first visit only, orange = multiple visits
-    const markerColor = isMultiple ? 'orange' : 'green';
+    // determine marker color
+    let markerColor;
+    if (city.name === mudanjiang.name) {
+      markerColor = 'rgb(97,170,227)'; // Mudanjiang
+    } else if (isMultiple) {
+      markerColor = 'rgb(25,25,112)'; // revisit
+    } else {
+      markerColor = 'rgb(224,255,255)'; // first visit
+    }
 
     const marker = L.circleMarker(city.coords, {
       radius: 8,
