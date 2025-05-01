@@ -38,7 +38,7 @@ if (window !== window.top) {
 
   <div id="legend" style="background: white; padding: 1px; border: 1px solid #ccc; position: absolute; top: -100px; right: 0px; z-index: 1000; font-size: 15px;">
   <b>Legend:</b>
-  <table style="border-collapse: collapse; margin-bottom: 0; padding-bottom: 0;">
+  <table style="border-collapse: collapse; margin-bottom: -2px; padding-bottom: -2px;">
     <tr style="border: none;">
       <td style="border: none; padding-top: 3px; padding-right: 5px; text-align: center;">
         <i class="fa fa-home" style="color: rgb(97,170,227);"></i>
