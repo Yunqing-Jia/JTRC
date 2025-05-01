@@ -29,6 +29,14 @@ if (window !== window.top) {
 
 <br>
 
+<!-- Legend -->
+<div id="legend" style="background: white; padding: 8px; border: 1px solid #ccc; position: absolute; bottom: 5px; right: 5px; z-index: 1000; font-size: 15px;">
+  <b>Legend:</b><br>
+  <i class="fa fa-home" style="color: rgb(97,170,227);"></i> Mudanjiang - Hometown<br>
+  <span style="color: rgb(224,255,255);">●</span> First Visit<br>
+  <span style="color: blue;">●</span> Multiple Visits<br>
+</div>
+
 <!-- Controls -->
 <div style="margin: 10px;">
   <label for="yearSlider">Year:</label>
@@ -40,12 +48,4 @@ if (window !== window.top) {
 
 <div style="height: 25px;"></div>
 
-<!-- Legend -->
-<div id="legend" style="background: white; padding: 8px; border: 1px solid #ccc; position: absolute; bottom: 5px; left: 0px; z-index: 1000; font-size: 15px;">
-  <b>Legend:</b><br>
-  <i class="fa fa-home" style="color: rgb(97,170,227);"></i> Mudanjiang - Hometown<br>
-  <span style="color: rgb(224,255,255);">●</span> First Visit<br>
-  <span style="color: blue;">●</span> Multiple Visits<br>
-</div>
 
-<div style="height: 100px;"></div>
