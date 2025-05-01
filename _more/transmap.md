@@ -44,7 +44,7 @@ if (window !== window.top) {
   <span id="yearLabel">ALL</span>
 </div>
 
-<br>
+<div style="height: 50px;"></div>
 
 <!-- Legend -->
 <div id="legend" style="background: white; padding: 8px; border: 1px solid #ccc; position: absolute; bottom: 5px; left: 0px; z-index: 1000; font-size: 15px;">
