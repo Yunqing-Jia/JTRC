@@ -32,10 +32,10 @@ This webpage is reserved for visualizing countries and cities Yunqing Jia has vi
 </div>
 
 <!-- Legend -->
-<div id="legend" style="background: white; padding: 8px; border: 1px solid #ccc; position: absolute; bottom: 5px; left: 1px; z-index: 1000; font-size: 15px;">
+<div id="legend" style="background: white; padding: 8px; border: 1px solid #ccc; position: absolute; bottom: 5px; left: 0px; z-index: 1000; font-size: 15px;">
   <b>Legend:</b><br>
-  <i class="fa fa-home" style="color: rgb(97,170,227);"></i> Mudanjiang
-  <span style="color: rgb(224,255,255);">●</span> First Visit
+  <i class="fa fa-home" style="color: rgb(97,170,227);"></i> Mudanjiang<br>
+  <span style="color: rgb(224,255,255);">●</span> First Visit<br>
   <span style="color: blue;">●</span> Multiple Visits
 </div>
 
