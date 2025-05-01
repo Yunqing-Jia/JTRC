@@ -36,6 +36,8 @@ if (window !== window.top) {
   <span id="yearLabel">ALL</span>
 </div>
 
+{% include transportationmap.html %}
+
 <div style="height: 50px;"></div>
 
 <!-- Legend -->
@@ -46,4 +48,3 @@ if (window !== window.top) {
   <span style="color: blue;">●</span> Multiple Visits<br>
 </div>
 
-{% include transportationmap.html %}
