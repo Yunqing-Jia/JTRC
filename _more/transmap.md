@@ -32,8 +32,8 @@ This webpage is reserved for visualizing countries and cities Yunqing Jia has vi
 <div id="legend" style="background: white; padding: 8px; border: 1px solid #ccc; position: absolute; bottom: 5px; right: 50px; z-index: 1000; font-size: 15px;">
   <b>Legend:</b><br>
   <span style="color: rgb(97,170,227);">●</span> Mudanjiang - Hometown<br>
-  <span style="color: rgb(25,25,112);">●</span> First Visit<br>
-  <span style="color: rgb(224,255,255);">●</span> Multiple Visits
+  <span style="color: rgb(224,255,255);">●</span> First Visit<br>
+  <span style="color: rgb(25,25,112);">●</span> Multiple Visits
 </div>
 
 <!-- Leaflet CSS & JS -->
@@ -56,13 +56,13 @@ This webpage is reserved for visualizing countries and cities Yunqing Jia has vi
 
   // Visited cities data
   const visitedCities = [
+    { name: 'Mudanjiang', coords: [44.586111, 129.599444], years: Array.from({length:{{ site.time | date: '%Y' }}-1999+1}, (_,i)=>1999+i) } // Every year
     { name: 'Beijing', coords: [39.9042, 116.4074], years: [2013, 2017, 2020] },
     { name: 'Shanghai', coords: [31.2304, 121.4737], years: [2010] },
     { name: 'Nanjing', coords: [32.0603, 118.7969], years: [2019, 2021] },
     { name: 'Chengdu', coords: [30.5728, 104.0668], years: [2018] },
     { name: 'Xi\'an', coords: [34.3416, 108.9398], years: [2017, 2022] },
     { name: 'Shenzhen', coords: [22.5431, 114.0579], years: [2014, 2015, 2019] },
-    { name: 'Mudanjiang', coords: [44.586111, 129.599444], years: Array.from({length:{{ site.time | date: '%Y' }}-1999+1}, (_,i)=>1999+i) } // Every year
   ];
 
   // Store markers & lines for later control
