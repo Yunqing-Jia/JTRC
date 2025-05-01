@@ -24,15 +24,16 @@ This webpage is reserved for visualizing countries and cities Yunqing Jia has vi
 <!-- Controls -->
 <div style="margin: 10px;">
   <label for="yearSlider">Year:</label>
-  <input type="range" id="yearSlider" min="1997" max="2025" step="1" value="1997">
+  <input type="range" id="yearSlider" min="1997" max="{{ site.time | date: '%Y' }}" step="1" value="1997">
   <span id="yearLabel">ALL</span>
 </div>
 
 <!-- Legend -->
-<div id="legend" style="background: white; padding: 8px; border: 1px solid #ccc; position: absolute; bottom: 10px; right: 10px; z-index: 1000; font-size: 14px;">
+<div id="legend" style="background: white; padding: 8px; border: 1px solid #ccc; position: absolute; bottom: 5px; right: 50px; z-index: 1000; font-size: 15px;">
   <b>Legend:</b><br>
-  <span style="color: green;">●</span> First visit<br>
-  <span style="color: orange;">●</span> Revisit
+  <span style="color: rgb(97,170,227);">●</span> Mudanjiang - Hometown<br>
+  <span style="color: rgb(25,25,112);">●</span> First Visit<br>
+  <span style="color: rgb(224,255,255);">●</span> Multiple Visits
 </div>
 
 <!-- Leaflet CSS & JS -->
@@ -61,7 +62,7 @@ This webpage is reserved for visualizing countries and cities Yunqing Jia has vi
     { name: 'Chengdu', coords: [30.5728, 104.0668], years: [2018] },
     { name: 'Xi\'an', coords: [34.3416, 108.9398], years: [2017, 2022] },
     { name: 'Shenzhen', coords: [22.5431, 114.0579], years: [2014, 2015, 2019] },
-    { name: 'Mudanjiang', coords: [44.586111, 129.599444], years: Array.from({length:2025-1999+1}, (_,i)=>1999+i) } // Every year
+    { name: 'Mudanjiang', coords: [44.586111, 129.599444], years: Array.from({length:{{ site.time | date: '%Y' }}-1999+1}, (_,i)=>1999+i) } // Every year
   ];
 
   // Store markers & lines for later control
@@ -78,7 +79,7 @@ This webpage is reserved for visualizing countries and cities Yunqing Jia has vi
     if (city.name === mudanjiang.name) {
       markerColor = 'rgb(97,170,227)'; // Mudanjiang
     } else if (isMultiple) {
-      markerColor = 'rgb(25,25,112)'; // revisit
+      markerColor = 'blue'; // revisit
     } else {
       markerColor = 'rgb(224,255,255)'; // first visit
     }
