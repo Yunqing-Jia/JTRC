@@ -36,7 +36,8 @@ This webpage is reserved for visualizing countries and cities Yunqing Jia has vi
   <b>Legend:</b><br>
   <i class="fa fa-home" style="color: rgb(97,170,227);"></i> Mudanjiang<br>
   <span style="color: rgb(224,255,255);">●</span> First Visit<br>
-  <span style="color: blue;">●</span> Multiple Visits
+  <span style="color: blue;">●</span> Multiple Visits<br>
+  <i class="fa fa-book" style="color: darkred;"></i> Scholar
 </div>
 
 <!-- Leaflet CSS & JS -->
@@ -44,10 +45,8 @@ This webpage is reserved for visualizing countries and cities Yunqing Jia has vi
 <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
 
 <script>
-  // Initialize map
   const map = L.map('map').setView([20, 0], 2);
 
-  // Basemap
   L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {
     attribution: '&copy; OpenStreetMap contributors &copy; CARTO',
     subdomains: 'abcd',
@@ -60,21 +59,19 @@ This webpage is reserved for visualizing countries and cities Yunqing Jia has vi
     { name: 'Mudanjiang', coords: [44.586111, 129.599444], years: Array.from({length: {{ site.time | date: '%Y' }} - 1999 + 1}, (_,i)=>1999+i) },
     { name: 'Beijing', coords: [39.9042, 116.4074], years: [2013, 2017, 2020] },
     { name: 'Shanghai', coords: [31.2304, 121.4737], years: [2010] },
-    { name: 'Nanjing', coords: [32.0603, 118.7969], years: [2019, 2021] },
+    { name: 'Nanjing', coords: [32.0603, 118.7969], years: [2019, 2021], scholar: true },
     { name: 'Chengdu', coords: [30.5728, 104.0668], years: [2018] },
-    { name: 'Xi\'an', coords: [34.3416, 108.9398], years: [2017, 2022] },
+    { name: 'Xi\'an', coords: [34.3416, 108.9398], years: [2017, 2022], scholar: true },
     { name: 'Shenzhen', coords: [22.5431, 114.0579], years: [2014, 2015, 2019] },
   ];
 
   const markers = [];
   const lines = [];
 
+  // Create all markers once
   visitedCities.forEach(city => {
-    const isMudanjiang = city.name === mudanjiang.name;
-    const isMultiple = city.years.length > 1;
-
     let marker;
-    if (isMudanjiang) {
+    if (city.name === mudanjiang.name) {
       marker = L.marker(city.coords, {
         icon: L.divIcon({
           html: '<i class="fa fa-home fa-2x" style="color: rgb(97,170,227);"></i>',
@@ -83,12 +80,20 @@ This webpage is reserved for visualizing countries and cities Yunqing Jia has vi
           iconAnchor: [12, 24]
         })
       });
+    } else if (city.scholar) {
+      marker = L.marker(city.coords, {
+        icon: L.divIcon({
+          html: '<i class="fa fa-book fa-2x" style="color: darkred;"></i>',
+          className: '',
+          iconSize: [24, 24],
+          iconAnchor: [12, 24]
+        })
+      });
     } else {
-      const markerColor = isMultiple ? 'blue' : 'rgb(224,255,255)';
       marker = L.circleMarker(city.coords, {
         radius: 8,
-        color: markerColor,
-        fillColor: markerColor,
+        color: 'rgb(224,255,255)',
+        fillColor: 'rgb(224,255,255)',
         fillOpacity: 0.8
       });
     }
@@ -100,7 +105,7 @@ This webpage is reserved for visualizing countries and cities Yunqing Jia has vi
 
     markers.push({ marker, city });
 
-    if (!isMudanjiang) {
+    if (city.name !== mudanjiang.name) {
       const line = L.polyline([mudanjiang.coords, city.coords], {
         color: 'rgb(135,206,235)',
         weight: 1.2,
@@ -128,16 +133,35 @@ This webpage is reserved for visualizing countries and cities Yunqing Jia has vi
 
   function updateMapByYear(selectedYear) {
     markers.forEach(({ marker, city }) => {
-      const show = (selectedYear === 'ALL') || city.years.includes(selectedYear);
-      if (show) {
+      const visitCount = (selectedYear === 'ALL')
+        ? city.years.length
+        : city.years.filter(y => y <= selectedYear).length;
+
+      if (visitCount > 0) {
+        // Show marker
         marker.addTo(map);
+
+        // Update style if circleMarker
+        if (marker instanceof L.CircleMarker) {
+          const color = visitCount >=2 ? 'blue' : 'rgb(224,255,255)';
+          marker.setStyle({
+            color: color,
+            fillColor: color,
+            fillOpacity: 0.8
+          });
+        }
       } else {
+        // Hide marker
         map.removeLayer(marker);
       }
     });
+
     lines.forEach(({ line, city }) => {
-      const show = (selectedYear === 'ALL') || city.years.includes(selectedYear);
-      if (show) {
+      const visitCount = (selectedYear === 'ALL')
+        ? city.years.length
+        : city.years.filter(y => y <= selectedYear).length;
+      
+      if (visitCount > 0) {
         line.addTo(map);
       } else {
         map.removeLayer(line);
