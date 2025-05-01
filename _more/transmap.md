@@ -10,14 +10,13 @@ font-size:21px;
 }
 </style>
 
-<script>
-  if (window !== window.top) {
-    document.querySelectorAll('body > *:not(#map)').forEach(e => e.style.display = 'none');
-    document.documentElement.style.height = '100%';
-    document.body.style.height = '100%';
-    document.getElementById('map').style.height = '100%';
-  }
-</script>
+if (window !== window.top) {
+  document.querySelectorAll('body *:not(#map):not(#map *)').forEach(e => e.style.display = 'none');
+  document.documentElement.style.height = '100%';
+  document.body.style.height = '100%';
+  const map = document.getElementById('map');
+  if (map) map.style.height = '100%';
+}
 
 ### Visualization of Countries (Regions) and Cities Yunqing Jia Has Visited
 
