@@ -40,22 +40,22 @@ if (window !== window.top) {
   <b>Legend:</b>
   <table style="border-collapse: collapse;">
     <tr style="border: none;">
-      <td style="border: none; padding-right: 5px; text-align: center;">
+      <td style="border: none; padding-top: 1px; padding-right: 5px; text-align: center;">
         <i class="fa fa-home" style="color: rgb(97,170,227);"></i>
       </td>
       <td style="border: none;">Mudanjiang - Hometown</td>
     </tr>
     <tr style="border: none;">
-      <td style="border: none; padding-right: 5px; text-align: center;">
+      <td style="border: none; padding-top: 1px; padding-right: 5px; text-align: center;">
         <span style="color: rgb(224,255,255);">●</span>
       </td>
       <td style="border: none;">First Visit</td>
     </tr>
     <tr style="border: none;">
-      <td style="border: none; padding-right: 5px; text-align: center; padding-bottom: -5px;">
+      <td style="border: none; padding-top: 1px; padding-right: 5px; text-align: center;">
         <span style="color: blue;">●</span>
       </td>
-      <td style="border: none; padding-bottom: -5px;">Multiple Visits</td>
+      <td style="border: none; padding-top: 1px;">Multiple Visits</td>
     </tr>
   </table>
   </div>
