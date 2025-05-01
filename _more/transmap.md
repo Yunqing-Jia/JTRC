@@ -48,7 +48,7 @@ This webpage is reserved for visualizing countries and cities Yunqing Jia has vi
 ">
   <div><i class="fa fa-home" style="color: rgb(97,170,227);"></i> Mudanjiang</div>
   <div><span style="color: rgb(224,255,255);">●</span> First Visit</div>
-  <div><span style="color: rgb(25,25,112);">●</span> Multiple Visits</div>
+  <div><span style="color: blue;">●</span> Multiple Visits</div>
   <div></div>
 </div>
 
@@ -97,7 +97,7 @@ This webpage is reserved for visualizing countries and cities Yunqing Jia has vi
         })
       });
     } else {
-      const markerColor = isMultiple ? 'rgb(25,25,112)' : 'rgb(224,255,255)';
+      const markerColor = isMultiple ? 'blue' : 'rgb(224,255,255)';
       marker = L.circleMarker(city.coords, {
         radius: 8,
         color: markerColor,
