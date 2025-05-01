@@ -36,11 +36,28 @@ if (window !== window.top) {
   <input type="range" id="yearSlider" min="1997" max="{{ site.time | date: '%Y' }}" step="1" value="1997">
   <span id="yearLabel">ALL</span>
 
-  <div id="legend" style="background: white; padding: 8px; border: 1px solid #ccc; position: absolute; top: -100px; right: 0px; z-index: 1000; font-size: 15px; display: grid; grid-template-columns: auto 1fr; row-gap: 5px; align-items: center;">
-  <b>Legend:</b><span></span>
-  <i class="fa fa-home" style="color: rgb(97,170,227); text-align: center;"></i><span>Mudanjiang - Hometown</span>
-  <span style="color: rgb(224,255,255); text-align: center;">●</span><span>First Visit</span>
-  <span style="color: blue; text-align: center;">●</span><span>Multiple Visits</span>
+  <div id="legend" style="background: white; padding: 8px; border: 1px solid #ccc; position: absolute; top: -100px; right: 0px; z-index: 1000; font-size: 15px;">
+  <b>Legend:</b>
+  <table style="border-collapse: collapse;">
+    <tr style="border: none;">
+      <td style="border: none; padding-right: 5px; text-align: center;">
+        <i class="fa fa-home" style="color: rgb(97,170,227);"></i>
+      </td>
+      <td style="border: none;">Mudanjiang - Hometown</td>
+    </tr>
+    <tr style="border: none;">
+      <td style="border: none; padding-right: 5px; text-align: center;">
+        <span style="color: rgb(224,255,255);">●</span>
+      </td>
+      <td style="border: none;">First Visit</td>
+    </tr>
+    <tr style="border: none;">
+      <td style="border: none; padding-right: 5px; text-align: center;">
+        <span style="color: blue;">●</span>
+      </td>
+      <td style="border: none;">Multiple Visits</td>
+    </tr>
+  </table>
   </div>
 
 </div>
