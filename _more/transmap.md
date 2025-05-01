@@ -32,12 +32,11 @@ This webpage is reserved for visualizing countries and cities Yunqing Jia has vi
 </div>
 
 <!-- Legend -->
-<div id="legend" style="background: white; padding: 8px; border: 1px solid #ccc; position: absolute; bottom: 5px; left: 0px; z-index: 1000; font-size: 15px;">
+<div id="legend" style="background: white; padding: 8px; border: 1px solid #ccc; position: absolute; bottom: 15px; left: 0px; z-index: 1000; font-size: 15px;">
   <b>Legend:</b><br>
   <i class="fa fa-home" style="color: rgb(97,170,227);"></i> Mudanjiang<br>
   <span style="color: rgb(224,255,255);">●</span> First Visit<br>
   <span style="color: blue;">●</span> Multiple Visits<br>
-  <i class="fa fa-book" style="color: darkred;"></i> Scholar
 </div>
 
 <!-- Leaflet CSS & JS -->
@@ -59,10 +58,30 @@ This webpage is reserved for visualizing countries and cities Yunqing Jia has vi
     { name: 'Mudanjiang', coords: [44.586111, 129.599444], years: Array.from({length: {{ site.time | date: '%Y' }} - 1999 + 1}, (_,i)=>1999+i) },
     { name: 'Beijing', coords: [39.9042, 116.4074], years: [2013, 2017, 2020] },
     { name: 'Shanghai', coords: [31.2304, 121.4737], years: [2010] },
-    { name: 'Nanjing', coords: [32.0603, 118.7969], years: [2019, 2021], scholar: true },
+    { name: 'Nanjing', coords: [32.0603, 118.7969], years: [2019, 2021] },
     { name: 'Chengdu', coords: [30.5728, 104.0668], years: [2018] },
-    { name: 'Xi\'an', coords: [34.3416, 108.9398], years: [2017, 2022], scholar: true },
+    { name: 'Xi\'an', coords: [34.3416, 108.9398], years: [2017, 2022] },
     { name: 'Shenzhen', coords: [22.5431, 114.0579], years: [2014, 2015, 2019] },
+    { name: 'Changsha', coords: [28.2282, 112.9388], years: [2016] },
+    { name: 'Wuhan', coords: [30.5928, 114.3055], years: [2012, 2016] },
+    { name: 'Qinhuangdao', coords: [39.9354, 119.5996], years: [2009, 2015, 2021] },
+    { name: 'Harbin', coords: [45.8038, 126.5350], years: [2003, 2015, 2020] },
+    { name: 'Shenyang', coords: [41.8057, 123.4315], years: [2011] },
+    { name: 'Dalian', coords: [38.9140, 121.6147], years: [2013] },
+    { name: 'Hong Kong', coords: [22.3193, 114.1694], years: [2017] },
+    { name: 'Xing\'an League', coords: [46.0838, 122.0670], years: [2008] },
+    { name: 'Zhenjiang', coords: [32.1896, 119.4250], years: [2019] },
+    { name: 'Suzhou', coords: [31.2989, 120.5853], years: [2014, 2021] },
+    { name: 'Hangzhou', coords: [30.2741, 120.1551], years: [2021] },
+    { name: 'Changde', coords: [29.0397, 111.6839], years: [2015] },
+    { name: 'Rizhao', coords: [35.4164, 119.5272], years: [2012] },
+    { name: 'Qingdao', coords: [36.0671, 120.3826], years: [2018] },
+    { name: 'Kangding', coords: [30.0553, 101.9641], years: [2020] },
+    { name: 'Chuzhou', coords: [32.3210, 118.2972], years: [2018] },
+    { name: 'Lueyang', coords: [33.3316, 106.1544], years: [2014] },
+    { name: 'Washington D.C.', coords: [38.8951, -77.0364], years: [2023] },
+    { name: 'Vienna', coords: [48.2082, 16.3738], years: [2025] },
+    { name: 'Graz', coords: [47.0707, 15.4395], years: [2025] },
   ];
 
   const markers = [];
@@ -75,15 +94,6 @@ This webpage is reserved for visualizing countries and cities Yunqing Jia has vi
       marker = L.marker(city.coords, {
         icon: L.divIcon({
           html: '<i class="fa fa-home fa-2x" style="color: rgb(97,170,227);"></i>',
-          className: '',
-          iconSize: [24, 24],
-          iconAnchor: [12, 24]
-        })
-      });
-    } else if (city.scholar) {
-      marker = L.marker(city.coords, {
-        icon: L.divIcon({
-          html: '<i class="fa fa-book fa-2x" style="color: darkred;"></i>',
           className: '',
           iconSize: [24, 24],
           iconAnchor: [12, 24]
@@ -138,10 +148,7 @@ This webpage is reserved for visualizing countries and cities Yunqing Jia has vi
         : city.years.filter(y => y <= selectedYear).length;
 
       if (visitCount > 0) {
-        // Show marker
         marker.addTo(map);
-
-        // Update style if circleMarker
         if (marker instanceof L.CircleMarker) {
           const color = visitCount >=2 ? 'blue' : 'rgb(224,255,255)';
           marker.setStyle({
@@ -151,7 +158,6 @@ This webpage is reserved for visualizing countries and cities Yunqing Jia has vi
           });
         }
       } else {
-        // Hide marker
         map.removeLayer(marker);
       }
     });
