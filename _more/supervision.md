@@ -28,7 +28,7 @@ font-size:15px;
 </div>
 <div class="panel-body">
 <div class="introh">
-JCAI supervises and ensures that all activities of JTRC (JLRC) adhere to the following academic ethical standards: 
+JCAI supervises and ensures that all scientific & technological activities of Yunqing Jia (JTRC | JLRC) adhere to the following academic ethical standards: 
 </div>
 
 <p>
