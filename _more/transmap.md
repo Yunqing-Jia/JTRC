@@ -71,7 +71,7 @@ font-size:21px;
     { name: 'Shenzhen', coords: [22.5431, 114.0579], years: [2014] },
     { name: 'Changsha', coords: [28.2282, 112.9388], years: [2024] },
     { name: 'Wuhan', coords: [30.5928, 114.3055], years: [2023] },
-    { name: 'Tai\ 'an', coords: [36.200252, 117.087614], years: [2017] },
+    { name: 'Tai\'an', coords: [36.200252, 117.087614], years: [2017] },
     { name: 'Tengzhou', coords: [35.114156, 117.165824], years: [2017] },
     { name: 'Jiangmen', coords: [22.578738, 113.081901], years: [2014] },
     { name: 'Shenyang', coords: [41.8057, 123.4315], years: [2018, 2025] },
