@@ -97,8 +97,8 @@ This webpage is reserved for visualizing countries and cities Yunqing Jia has vi
     // skip drawing line to self
     if (city.name !== mudanjiang.name) {
       const line = L.polyline([mudanjiang.coords, city.coords], {
-        color: 'blue',
-        weight: 2,
+        color: 'rgb(135,206,235)',
+        weight: 1.5,
         opacity: 0.5
       }).addTo(map);
       lines.push({ line, city });
