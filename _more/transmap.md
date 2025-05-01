@@ -10,11 +10,20 @@ font-size:21px;
 }
 </style>
 
-Hello world from JMOT_2505 (JMOI_2505A) Project powered by Leaflet & OpenStreetMap!
+## Visualization of Countries (Regions) and Cities Yunqing Jia has Visited So Far
 
 <br>
 
-This webpage is reserved for visualizing countries and cities Yunqing Jia has visited so far.
+<ul style="list-style-type: disc; padding-left: 20px;">
+  <li>JMOT_2505 (JMOI_2505A) Project powered by Leaflet & OpenStreetMap</li>
+  <li>Last modified on <span id="lastModified"></span></li>
+</ul>
+
+<script>
+  const today = new Date();
+  const formatted = today.toLocaleDateString('en-CA'); // YYYY-MM-DD
+  document.getElementById('lastModified').textContent = formatted;
+</script>
 
 <br>
 
@@ -30,6 +39,8 @@ This webpage is reserved for visualizing countries and cities Yunqing Jia has vi
   <input type="range" id="yearSlider" min="1997" max="{{ site.time | date: '%Y' }}" step="1" value="1997">
   <span id="yearLabel">ALL</span>
 </div>
+
+<br>
 
 <!-- Legend -->
 <div id="legend" style="background: white; padding: 8px; border: 1px solid #ccc; position: absolute; bottom: 5px; left: 0px; z-index: 1000; font-size: 15px;">
