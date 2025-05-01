@@ -34,7 +34,7 @@ if (window !== window.top) {
   <input type="range" id="yearSlider" min="1997" max="{{ site.time | date: '%Y' }}" step="1" value="1997">
   <span id="yearLabel">ALL</span>
 
-  <div id="legend" style="background: white; padding: 8px; border: 1px solid #ccc; position: absolute; top: -5px; right: 0px; z-index: 1000; font-size: 15px;">
+  <div id="legend" style="background: white; padding: 8px; border: 1px solid #ccc; position: absolute; top: 5px; right: 0px; z-index: 1000; font-size: 15px;">
     <b>Legend:</b><br>
     <i class="fa fa-home" style="color: rgb(97,170,227);"></i> Mudanjiang - Hometown<br>
     <span style="color: rgb(224,255,255);">●</span> First Visit<br>
