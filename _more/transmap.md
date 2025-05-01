@@ -33,7 +33,7 @@ This webpage is reserved for visualizing countries and cities Yunqing Jia has vi
   <b>Legend:</b><br>
   <span style="color: rgb(97,170,227);">●</span> Mudanjiang - Hometown<br>
   <span style="color: rgb(224,255,255);">●</span> First Visit<br>
-  <span style="color: rgb(25,25,112);">●</span> Multiple Visits
+  <span style="color: blue;">●</span> Multiple Visits
 </div>
 
 <!-- Leaflet CSS & JS -->
