@@ -10,7 +10,7 @@ font-size:21px;
 }
 </style>
 
-## Visualization of Countries (Regions) and Cities Yunqing Jia has Visited So Far
+### Visualization of Countries (Regions) and Cities Yunqing Jia Has Visited
 
 <br>
 
@@ -39,7 +39,7 @@ font-size:21px;
 <!-- Legend -->
 <div id="legend" style="background: white; padding: 8px; border: 1px solid #ccc; position: absolute; bottom: 5px; left: 0px; z-index: 1000; font-size: 15px;">
   <b>Legend:</b><br>
-  <i class="fa fa-home" style="color: rgb(97,170,227);"></i> Mudanjiang<br>
+  <i class="fa fa-home" style="color: rgb(97,170,227);"></i> Mudanjiang - Hometown<br>
   <span style="color: rgb(224,255,255);">●</span> First Visit<br>
   <span style="color: blue;">●</span> Multiple Visits<br>
 </div>
