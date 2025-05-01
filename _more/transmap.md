@@ -18,6 +18,9 @@ This webpage is reserved for visualizing countries and cities Yunqing Jia has vi
 
 <br>
 
+<!-- Font Awesome -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
 <!-- Map container -->
 <div id="map" style="width: 100%; height: 80vh;"></div>
 
@@ -29,11 +32,24 @@ This webpage is reserved for visualizing countries and cities Yunqing Jia has vi
 </div>
 
 <!-- Legend -->
-<div id="legend" style="background: white; padding: 8px; border: 1px solid #ccc; position: absolute; bottom: 5px; right: 50px; z-index: 1000; font-size: 15px;">
-  <b>Legend:</b><br>
-  <span style="color: rgb(97,170,227);">●</span> Mudanjiang - Hometown<br>
-  <span style="color: rgb(224,255,255);">●</span> First Visit<br>
-  <span style="color: blue;">●</span> Multiple Visits
+<div id="legend" style="
+  background: white;
+  padding: 8px;
+  border: 1px solid #ccc;
+  position: absolute;
+  bottom: 5px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1000;
+  font-size: 15px;
+  display: grid;
+  grid-template-columns: auto auto;
+  gap: 4px;
+">
+  <div><i class="fa fa-home" style="color: rgb(97,170,227);"></i> Mudanjiang</div>
+  <div><i class="fa fa-book" style="color: black;"></i> Higher Education</div>
+  <div><span style="color: rgb(224,255,255);">●</span> First Visit</div>
+  <div><span style="color: blue;">●</span> Multiple Visits</div>
 </div>
 
 <!-- Leaflet CSS & JS -->
@@ -41,22 +57,20 @@ This webpage is reserved for visualizing countries and cities Yunqing Jia has vi
 <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
 
 <script>
-  // Initialize map centered globally
+  // Initialize map
   const map = L.map('map').setView([20, 0], 2);
 
-  // Light blue basemap
+  // Basemap
   L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {
     attribution: '&copy; OpenStreetMap contributors &copy; CARTO',
     subdomains: 'abcd',
     maxZoom: 19
   }).addTo(map);
 
-  // Reference city (Mudanjiang)
   const mudanjiang = { name: 'Mudanjiang', coords: [44.586111, 129.599444] };
 
-  // Visited cities data
   const visitedCities = [
-    { name: 'Mudanjiang', coords: [44.586111, 129.599444], years: Array.from({length:{{ site.time | date: '%Y' }}-1999+1}, (_,i)=>1999+i) } // Every year
+    { name: 'Mudanjiang', coords: [44.586111, 129.599444], years: Array.from({length: {{ site.time | date: '%Y' }} - 1999 + 1}, (_,i)=>1999+i) },
     { name: 'Beijing', coords: [39.9042, 116.4074], years: [2013, 2017, 2020] },
     { name: 'Shanghai', coords: [31.2304, 121.4737], years: [2010] },
     { name: 'Nanjing', coords: [32.0603, 118.7969], years: [2019, 2021] },
@@ -65,52 +79,61 @@ This webpage is reserved for visualizing countries and cities Yunqing Jia has vi
     { name: 'Shenzhen', coords: [22.5431, 114.0579], years: [2014, 2015, 2019] },
   ];
 
-  // Store markers & lines for later control
   const markers = [];
   const lines = [];
 
-  // Create markers and lines
   visitedCities.forEach(city => {
     const firstVisitYear = Math.min(...city.years);
     const isMultiple = city.years.length > 1;
 
-    // determine marker color
-    let markerColor;
+    let marker;
     if (city.name === mudanjiang.name) {
-      markerColor = 'rgb(97,170,227)'; // Mudanjiang
-    } else if (isMultiple) {
-      markerColor = 'blue'; // revisit
+      marker = L.marker(city.coords, {
+        icon: L.divIcon({
+          html: '<i class="fa fa-home fa-2x" style="color: rgb(97,170,227);"></i>',
+          className: '',
+          iconSize: [24, 24],
+          iconAnchor: [12, 24]
+        })
+      });
+    } else if (['Xi\'an', 'Nanjing'].includes(city.name)) {
+      marker = L.marker(city.coords, {
+        icon: L.divIcon({
+          html: '<i class="fa fa-book fa-2x" style="color: black;"></i>',
+          className: '',
+          iconSize: [24, 24],
+          iconAnchor: [12, 24]
+        })
+      });
     } else {
-      markerColor = 'rgb(224,255,255)'; // first visit
+      const markerColor = isMultiple ? 'rgb(25,25,112)' : 'rgb(224,255,255)';
+      marker = L.circleMarker(city.coords, {
+        radius: 8,
+        color: markerColor,
+        fillColor: markerColor,
+        fillOpacity: 0.8
+      });
     }
 
-    const marker = L.circleMarker(city.coords, {
-      radius: 8,
-      color: markerColor,
-      fillColor: markerColor,
-      fillOpacity: 0.8
-    })
-    .bindPopup(`<b>${city.name}</b><br>Visited: ${city.years.join(', ')}`)
-    .addTo(map);
+    marker
+      .bindTooltip(city.name, { direction: 'top' })
+      .bindPopup(`<b>${city.name}</b><br>Visited: ${city.years.join(', ')}`)
+      .addTo(map);
 
     markers.push({ marker, city });
 
-    // skip drawing line to self
     if (city.name !== mudanjiang.name) {
       const line = L.polyline([mudanjiang.coords, city.coords], {
         color: 'rgb(135,206,235)',
-        weight: 1.5,
+        weight: 1.2,
         opacity: 0.5
       }).addTo(map);
       lines.push({ line, city });
     }
   });
 
-  // Fit map to show all markers
-  const allCoords = visitedCities.map(c => c.coords);
-  map.fitBounds(allCoords);
+  map.fitBounds(visitedCities.map(c => c.coords));
 
-  // Year slider event
   const slider = document.getElementById('yearSlider');
   const label = document.getElementById('yearLabel');
 
@@ -134,7 +157,6 @@ This webpage is reserved for visualizing countries and cities Yunqing Jia has vi
         map.removeLayer(marker);
       }
     });
-
     lines.forEach(({ line, city }) => {
       const show = (selectedYear === 'ALL') || city.years.includes(selectedYear);
       if (show) {
@@ -145,6 +167,5 @@ This webpage is reserved for visualizing countries and cities Yunqing Jia has vi
     });
   }
 
-  // Default: show all
   updateMapByYear('ALL');
 </script>
