@@ -52,10 +52,10 @@ if (window !== window.top) {
       <td style="border: none;">First Visit</td>
     </tr>
     <tr style="border: none;">
-      <td style="border: none; padding-right: 5px; text-align: center;">
+      <td style="border: none; padding-right: 5px; text-align: center; padding-bottom: -5px;">
         <span style="color: blue;">●</span>
       </td>
-      <td style="border: none;">Multiple Visits</td>
+      <td style="border: none; padding-bottom: -5px;">Multiple Visits</td>
     </tr>
   </table>
   </div>
