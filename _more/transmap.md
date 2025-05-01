@@ -36,7 +36,7 @@ if (window !== window.top) {
   <input type="range" id="yearSlider" min="1997" max="{{ site.time | date: '%Y' }}" step="1" value="1997">
   <span id="yearLabel">ALL</span>
 
-  <div id="legend" style="background: white; padding: 8px; border: 1px solid #ccc; position: absolute; top: -100px; right: 0px; z-index: 1000; font-size: 15px;">
+  <div id="legend" style="background: white; padding: 8px; border: 1px solid #ccc; position: absolute; top: -150px; right: 0px; z-index: 1000; font-size: 15px;">
   <b>Legend:</b>
   <table style="border-collapse: collapse;">
     <tr style="border: none;">
