@@ -29,12 +29,14 @@ if (window !== window.top) {
 
 <br>
 
+<div style="height: 50px;"></div>
+
 <div style="margin: 10px; position: relative;">
   <label for="yearSlider">Year:</label>
   <input type="range" id="yearSlider" min="1997" max="{{ site.time | date: '%Y' }}" step="1" value="1997">
   <span id="yearLabel">ALL</span>
 
-  <div id="legend" style="background: white; padding: 8px; border: 1px solid #ccc; position: absolute; top: -79px; right: 0px; z-index: 1000; font-size: 15px;">
+  <div id="legend" style="background: white; padding: 8px; border: 1px solid #ccc; position: absolute; top: -100px; right: 0px; z-index: 1000; font-size: 15px;">
     <b>Legend:</b><br>
     <i class="fa fa-home" style="color: rgb(97,170,227);"></i> Mudanjiang - Hometown<br>
     <span style="color: rgb(224,255,255);">●</span> First Visit<br>
@@ -44,6 +46,6 @@ if (window !== window.top) {
 
 {% include transportationmap.html %}
 
-<div style="height: 25px;"></div>
+
 
 
