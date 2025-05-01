@@ -29,8 +29,6 @@ if (window !== window.top) {
 
 <br>
 
-{% include transportationmap.html %}
-
 <!-- Controls -->
 <div style="margin: 10px;">
   <label for="yearSlider">Year:</label>
@@ -48,3 +46,4 @@ if (window !== window.top) {
   <span style="color: blue;">●</span> Multiple Visits<br>
 </div>
 
+{% include transportationmap.html %}
