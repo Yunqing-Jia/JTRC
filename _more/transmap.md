@@ -10,6 +10,15 @@ font-size:21px;
 }
 </style>
 
+<script>
+  if (window !== window.top) {
+    document.querySelectorAll('body > *:not(#map)').forEach(e => e.style.display = 'none');
+    document.documentElement.style.height = '100%';
+    document.body.style.height = '100%';
+    document.getElementById('map').style.height = '100%';
+  }
+</script>
+
 ### Visualization of Countries (Regions) and Cities Yunqing Jia Has Visited
 
 <br>
