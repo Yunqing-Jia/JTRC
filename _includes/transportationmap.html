@@ -36,6 +36,9 @@
     { name: 'Jiangmen', coords: [22.578738, 113.081901], years: [2014] },
     { name: 'Shenyang', coords: [41.8057, 123.4315], years: [2018, 2023, 2024, 2025] },
     { name: 'Dalian', coords: [38.9140, 121.6147], years: [2011] },
+    { name: 'Yanbian (Changbai mountain)', coords: [42.195746, 128.175990], years: [2011] },
+    { name: 'Ningbo', coords: [29.86551, 121.54173], years: [2024] },
+    { name: 'Baoji (Taibai mountain)', coords: [34.135288, 107.912584], years: [2018, 2020] },
     { name: 'Hong Kong', coords: [22.3193, 114.1694], years: [2014] },
     { name: 'Xing\'an League', coords: [46.0838, 122.0670], years: [2014] },
     { name: 'Zhenjiang', coords: [32.1896, 119.4250], years: [2023] },
@@ -93,8 +96,6 @@
     }
   });
 
-  map.fitBounds(visitedCities.map(c => c.coords));
-
   const slider = document.getElementById('yearSlider');
   const label = document.getElementById('yearLabel');
 
@@ -103,6 +104,7 @@
     if (year === 1997) {
       label.textContent = 'ALL';
       updateMapByYear('ALL');
+      map.fitBounds(visitedCities.map(c => c.coords)); // Reset to show all on 'ALL'
     } else {
       label.textContent = year;
       updateMapByYear(year);
@@ -110,6 +112,7 @@
   });
 
   function updateMapByYear(selectedYear) {
+    let visibleCities = [];
     markers.forEach(({ marker, city }) => {
       const visitCount = (selectedYear === 'ALL')
         ? city.years.length
@@ -117,6 +120,7 @@
 
       if (visitCount > 0) {
         marker.addTo(map);
+        visibleCities.push(city.coords);
         if (marker instanceof L.CircleMarker) {
           const color = visitCount >=2 ? 'blue' : 'rgb(224,255,255)';
           marker.setStyle({
@@ -141,6 +145,15 @@
         map.removeLayer(line);
       }
     });
+
+    // Adjust map bounds if a specific year is selected and there are visible cities
+    if (selectedYear !== 'ALL' && visibleCities.length > 0) {
+      const bounds = L.latLngBounds(visibleCities);
+      map.fitBounds(bounds, { padding: [20, 20] }); // Add some padding
+    } else if (selectedYear !== 'ALL' && visibleCities.length === 0) {
+      // If no cities visited in the selected year, reset view to a default
+      map.setView([20, 0], 2);
+    }
   }
 
   updateMapByYear('ALL');
