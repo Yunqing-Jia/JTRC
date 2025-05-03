@@ -2,6 +2,7 @@
 title: Thesis
 permalink: /jmtr/thesis/
 ---
+<a name="JMTR_2301"/>
 
 <style>
 .intro{
@@ -14,7 +15,7 @@ font-size:21px;
 <div class="intro">
 Joint Optimization of Connected Bus Trajectories & Traffic Signals
 </div>
-<a name="JMTR_2301"/>
+
 <ul class="nav nav-tabs">
   <li class="active"><a href="#home2" data-toggle="tab">Overview</a></li>
   <li><a href="#profile2" data-toggle="tab">Abstract</a></li>
@@ -45,13 +46,14 @@ Joint Optimization of Connected Bus Trajectories & Traffic Signals
   </div>
 </div>
 
+<a name="JMTR_2021"/>
 <br>
 
 ### B.E. Thesis
 <div class="intro">
 Sustainable Traffic Management and Control Strategy for Urban Intersections
 </div>
-<a name="JMTR_2021"/>
+
 <ul class="nav nav-tabs">
   <li class="active"><a href="#home1" data-toggle="tab">Overview</a></li>
   <li><a href="#profile1" data-toggle="tab">Abstract</a></li>
