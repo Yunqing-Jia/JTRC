@@ -11,7 +11,7 @@ font-size:21px;
 }
 </style>
 
-### M.E. Thesis
+### M. Eng. Thesis
 <div class="intro">
 Joint Optimization of Connected Bus Trajectories & Traffic Signals
 </div>
@@ -49,7 +49,7 @@ Joint Optimization of Connected Bus Trajectories & Traffic Signals
 <a name="JMTR_2021"/>
 <br>
 
-### B.E. Thesis
+### B. Eng. Thesis
 <div class="intro">
 Sustainable Traffic Management and Control Strategy for Urban Intersections
 </div>
