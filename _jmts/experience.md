@@ -20,11 +20,10 @@ font-size:21px;
 [AGV scheduling strategy based on improved A star algorithm in unmanned warehouse](#jmts_2204)  
 [Feasibility study of shared intelligent parking system](#jmts_1802)  
 
+<a name="jmts_2202"/> 
 ## Project Experience Description
 ### I. Urban road network modeling & simulation based on field data
 #### i. A matrix-based coding tool for establishing urban road network topology
-
-<a name="jmts_2202"/>
 
 <div class="container">
     <div class="row">
@@ -46,6 +45,7 @@ font-size:21px;
 </div>
 
 <a name="jmtr_2021"/>
+<br>
 
 #### ii. Yangon road network modeling
 
@@ -67,6 +67,7 @@ font-size:21px;
 </div>
 
 <a name="jmts_2002"/>
+<br>
 
 ### II. Unconventional intersection design & analysis
 #### i. Continuous flow intersection (CFI) design
@@ -89,6 +90,7 @@ font-size:21px;
 </div>
 
 <a name="jmts_1907"/>
+<br>
 
 #### ii. Signalized roundabout design
 
@@ -109,7 +111,8 @@ font-size:21px;
     </div>
 </div>
 
-<a name="jmts_1909"/>
+<a name="jmts_1909"/> 
+<br>
 
 ### III. Operations research application in transportation & logistics
 #### i. Decision choice and revenue optimization model for airport taxi drivers
@@ -131,6 +134,7 @@ font-size:21px;
 </div>
 
 <a name="jmts_2110"/>
+<br>
 
 #### ii. Airline crew scheduling model
 
@@ -151,6 +155,7 @@ font-size:21px;
 </div>
 
 <a name="jmts_2204"/>
+<br>
 
 #### iii. AGV scheduling strategy based on improved A star algorithm in unmanned warehouse
 
@@ -171,6 +176,7 @@ font-size:21px;
 </div>
 
 <a name="jmts_1802"/>
+<br>
 
 ### IV. Intelligent transportation system component
 

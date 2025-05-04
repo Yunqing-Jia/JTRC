@@ -53,12 +53,12 @@ font-size:21px;
     </tr>
   </tbody>
 </table>
-
+<a name="JMTR_2301"/>
+  
 ## Research Program Description
 ### I. Multi-modal mixed traffic flow modeling
 #### i. Joint optimization of connected bus trajectories & traffic signals (JMTR_2301) 
 
-<a name="JMTR_2301"/>
 <div class="container">
     <div class="row">
     <div class="col-md-9">
@@ -74,6 +74,7 @@ font-size:21px;
     </div>
 </div>
 
+<a name="JMTR_2204"/> <a name="JMTR_2305"/> 
 <br>
 
 
@@ -94,7 +95,6 @@ font-size:21px;
 </div>
 
 <br>
-<a name="JMTR_2204"/> <a name="JMTR_2305"/> 
 
 <ul class="nav nav-tabs">
   <li class="active"><a href="#rtshome" data-toggle="tab">Overview</a></li>
@@ -113,6 +113,7 @@ font-size:21px;
   </div>
 </div>
 
+<a name="JMTR_2019"/> <a name="JMTR_2020"/> <a name="JMTR_2107"/> 
 <br>
 
 #### ii. Optimization of contraflow left-turn lanes (JMTR_2107, JMTR_2020, JMTR_2019) 
@@ -131,7 +132,6 @@ font-size:21px;
 </div>
 
 <br>
-<a name="JMTR_2019"/> <a name="JMTR_2020"/> <a name="JMTR_2107"/> 
 
 <ul class="nav nav-tabs">
   <li class="active"><a href="#cll" data-toggle="tab">Overview</a></li>
@@ -257,6 +257,7 @@ font-size:21px;
 <!--[JMTR_2000](#JMTR_2000)-->
 <!--## Headers-->
 
+<a name="JMTR_2021"/>
 <br>
 
 #### iii. Sustainable traffic management and control strategy for urban intersections (JMTR_2021) 
