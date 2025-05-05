@@ -29,4 +29,4 @@ font-size:21px;
 The following figure illustrates the basic structure of JMTR.
 </div>
 <br>
-<img src="/Jerland/jmtr/JMTR.jpg">
+<img src="{{ "jmtr/JMTR.jpg" | relative_url }}">
