@@ -33,7 +33,7 @@ font-size:21px;
   </ul>
 </div>
 
-<a href="#" class="btn btn-success active" onclick="toggleBibtex('bibtex-2202')">Cite</a>
+<a href="#" class="btn btn-cite active" onclick="toggleBibtex('bibtex-2202')">Cite</a>
 </div>
 
 <div id="bibtex-2202" class="bibtex-box" style="display: none; margin-top: 10px; max-width: 100%;">
@@ -56,7 +56,7 @@ font-size:21px;
 
 <div class="btn-toolbar" role="toolbar">
 <a href="https://www.sciencedirect.com/science/article/pii/S0959652620343018" class="btn btn-primary active" aria-pressed="true">Paper</a>
-<a href="#" class="btn btn-success active" onclick="toggleBibtex('bibtex-2020')">Cite</a>
+<a href="#" class="btn btn-cite active" onclick="toggleBibtex('bibtex-2020')">Cite</a>
 </div>
 
 <div id="bibtex-2020" class="bibtex-box" style="display: none; margin-top: 10px; max-width: 100%;">
