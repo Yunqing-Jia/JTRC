@@ -96,7 +96,10 @@ a.btn {
 .btn-slide {
   @include button-variant($btn-slide-color, $btn-slide-bg, $btn-slide-border);
 }
-
+// Video appears as pink
+.btn-video {
+  @include button-variant($btn-video-color, $btn-video-bg, $btn-video-border);
+}
 
 // Link buttons
 // -------------------------
