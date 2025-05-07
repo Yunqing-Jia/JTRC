@@ -30,8 +30,20 @@ Research Board (TRB 2024 Annual Meeting)</i>, January 7-11, 2024, Washington, D.
     <li><a href="https://yunqing-jia.github.io/JTRC/assets/JMTR_2204Paper.pdf">Github</a></li>
   </ul>
 </div>
-<a href="https://yunqing-jia.github.io/JTRC/jmtr/JMTR_2204S.pdf" class="btn btn-success active" aria-pressed="true">Slide</a>
+<a href="https://yunqing-jia.github.io/JTRC/jmtr/JMTR_2204S.pdf" class="btn btn-slide active" aria-pressed="true">Slide</a>
 <a href="https://github.com/Yunqing-Jia/JMTR_2204C" class="btn btn-info active" aria-pressed="true">Code</a>
+<a href="#" class="btn btn-cite active" onclick="toggleBibtex('bibtex-2204')">Cite</a>
+</div>
+
+<div id="bibtex-2204" class="bibtex-box" style="display: none; margin-top: 10px; max-width: 100%;">
+  <textarea class="form-control" rows="8" readonly>
+@incollection{jia2023joint,
+  title={Joint Optimization of Time-of-Day Intervals and Robust Signal Timing for Isolated Intersection},
+  author={Jia, Yunqing and An, Chengchuan and Lu, Zhenbo and Xia, Jingxin},
+  booktitle={CICTP 2023},
+  pages={2265--2275}
+}
+  </textarea>
 </div>
 
 <br>
@@ -52,11 +64,19 @@ Research Board (TRB 2024 Annual Meeting)</i>, January 7-11, 2024, Washington, D.
 </div>
 <div class="btn-toolbar" role="toolbar">
 <div class="btn-group">
-  <a href="#" class="btn btn-warning active" aria-pressed="true">Video</a>
-  <a href="#" class="btn btn-warning active dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></a>
+  <a href="#" class="btn btn-video active" aria-pressed="true">Video</a>
+  <a href="#" class="btn btn-video active dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></a>
   <ul class="dropdown-menu">
     <li><a href="https://yunqing-jia.github.io/JTRC/assets/JMTR_2019V1.mp4">Video 1</a></li>
     <li><a href="https://yunqing-jia.github.io/JTRC/assets/JMTR_2019V2.mp4">Video 2</a></li>
   </ul>
 </div>
 </div>
+
+
+<script>
+function toggleBibtex(id) {
+  const box = document.getElementById(id);
+  box.style.display = box.style.display === "none" ? "block" : "none";
+}
+</script>

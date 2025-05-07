@@ -38,7 +38,7 @@ font-size:21px;
             <p>Open access files: </p>
             <a href="https://github.com/Yunqing-Jia/JMTS_2202" class="btn btn-info active" aria-pressed="true">Code</a>
             <a href="https://yunqing-jia.github.io/JTRC/jmts/JMTS_2202_1_0R.pdf" target="_blank" class="btn btn-primary active" aria-pressed="true">Report</a>
-            <a href="https://yunqing-jia.github.io/JTRC/jmts/JMTS_2202_1_0M.pdf" target="_blank" class="btn btn-success active" aria-pressed="true">Manual</a>
+            <a href="https://yunqing-jia.github.io/JTRC/jmts/JMTS_2202_1_0M.pdf" target="_blank" class="btn btn-slide active" aria-pressed="true">Manual</a>
             </div>
         </div>
     </div>

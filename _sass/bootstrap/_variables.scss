@@ -21,6 +21,10 @@ $brand-info:            #5bc0de !default;
 $brand-warning:         #f0ad4e !default;
 $brand-danger:          #d9534f !default;
 
+$brand-cite:            #00ff00 !default;
+$brand-slide:            #b7472a !default;
+$brand-video:            #ee00ee !default;
+
 
 //== Scaffolding
 //
@@ -172,6 +176,18 @@ $btn-warning-border:             darken($btn-warning-bg, 5%) !default;
 $btn-danger-color:               #fff !default;
 $btn-danger-bg:                  $brand-danger !default;
 $btn-danger-border:              darken($btn-danger-bg, 5%) !default;
+
+$btn-cite-color:              #fff !default;
+$btn-cite-bg:                 $brand-cite !default;
+$btn-cite-border:             darken($btn-cite-bg, 5%) !default;
+
+$btn-slide-color:              #fff !default;
+$btn-slide-bg:                 $brand-slide !default;
+$btn-slide-border:             darken($btn-slide-bg, 5%) !default;
+
+$btn-video-color:              #fff !default;
+$btn-video-bg:                 $brand-video !default;
+$btn-video-border:             darken($btn-video-bg, 5%) !default;
 
 $btn-link-disabled-color:        $gray-light !default;
 
