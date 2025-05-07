@@ -88,6 +88,15 @@ a.btn {
   @include button-variant($btn-danger-color, $btn-danger-bg, $btn-danger-border);
 }
 
+// Cite appears as green
+.btn-cite {
+  @include button-variant($btn-cite-color, $btn-cite-bg, $btn-cite-border);
+}
+// Slide appears like Powerpoint
+.btn-slide {
+  @include button-variant($btn-slide-color, $btn-slide-bg, $btn-slide-border);
+}
+
 
 // Link buttons
 // -------------------------
