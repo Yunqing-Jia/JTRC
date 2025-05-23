@@ -58,25 +58,50 @@ Research Board (TRB 2024 Annual Meeting)</i>, January 7-11, 2024, Washington, D.
 <div class="intro">
 [5] <b>Jia, Y.</b>, & Chen, X. (*). (2019). Dynamic Traffic Signal Control Optimization for the Intersection with Contraflow Left-turn Lanes. <i>19th COTA International Conference of Transportation Professionals (CICTP2019)</i>, July 6-8, 2019, Nanjing, China
 </div>
+
 <br>
+
 <div class="intro">
 [6] <b>Jia, Y.</b>, & Chen, X. (*). (2019). Traffic Signal Coordination Control Optimization for Reducing Traffic Emissions of Intersection with Contraflow Left-turn Lane. <i>World Transport Convention (WTC2019)</i>, June 13-16, 2019, Beijing, China
 </div>
+
 <div class="btn-toolbar" role="toolbar">
-<div class="btn-group">
-  <a href="#" class="btn btn-video active" aria-pressed="true">Video</a>
-  <a href="#" class="btn btn-video active dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></a>
-  <ul class="dropdown-menu">
-    <li><a href="https://yunqing-jia.github.io/JTRC/assets/JMTR_2019V1.mp4">Video 1</a></li>
-    <li><a href="https://yunqing-jia.github.io/JTRC/assets/JMTR_2019V2.mp4">Video 2</a></li>
-  </ul>
-</div>
+  <div class="btn-group">
+    <a href="#" class="btn btn-video active" onclick="toggleVideoBox()">Video</a>
+    <a href="#" class="btn btn-video active dropdown-toggle" data-toggle="dropdown">
+      <span class="caret"></span>
+    </a>
+    <ul class="dropdown-menu">
+      <li><a href="#" onclick="playVideo('https://yunqing-jia.github.io/JTRC/assets/JMTR_2019V1.mp4')">Video 1</a></li>
+      <li><a href="#" onclick="playVideo('https://yunqing-jia.github.io/JTRC/assets/JMTR_2019V2.mp4')">Video 2</a></li>
+    </ul>
+  </div>
 </div>
 
+<div id="video-box" class="video-box" style="display: none; margin-top: 10px;">
+  <video id="video-player" width="640" height="360" controls>
+    <source src="" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+</div>
 
 <script>
 function toggleBibtex(id) {
   const box = document.getElementById(id);
   box.style.display = box.style.display === "none" ? "block" : "none";
+}
+  
+function toggleVideoBox() {
+  const box = document.getElementById('video-box');
+  box.style.display = (box.style.display === 'none') ? 'block' : 'none';
+}
+
+function playVideo(videoUrl) {
+  const box = document.getElementById('video-box');
+  const player = document.getElementById('video-player');
+  player.src = videoUrl;
+  player.load();
+  player.play();
+  box.style.display = 'block';
 }
 </script>
