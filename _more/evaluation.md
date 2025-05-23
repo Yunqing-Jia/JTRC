@@ -1,6 +1,6 @@
 ---
-title: Self Metering
-permalink: /more/meter/
+title: Self Evaluation
+permalink: /more/evaluation/
 ---
 
 
