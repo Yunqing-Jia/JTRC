@@ -45,14 +45,14 @@ font-size:21px;
   </tr>
   <tr class="funding1" style="font-size: 9px; font-weight: normal;">
     <td rowspan="3">National Innovation and Entrepreneurship Training Program for Undergraduates of  Shaanxi Province</td>
-    <th>S201910710021</th>
-    <th>Regional traffic signal adaptive control based on queuing model</th>
-    <th>2019.7</th>
-    <th>2020.12</th>
-    <th>5,000</th>
-    <th>PI (1st)</th>
-    <th>3rd prize</th>
-    <th><a href="https://yunqing-jia.github.io/JTRC/jmtr/thesis/#JMTR_2020">JMTR_2020</a></th>
+    <td>S201910710021</td>
+    <td>Regional traffic signal adaptive control based on queuing model</td>
+    <td>2019.7</td>
+    <td>2020.12</td>
+    <td>5,000</td>
+    <td>PI (1st)</td>
+    <td>3rd prize</td>
+    <td><a href="https://yunqing-jia.github.io/JTRC/jmtr/thesis/#JMTR_2020">JMTR_2020</a></td>
   </tr>
   <tr class="funding1" style="font-size: 9px; font-weight: normal;">
     <td>S201910710038</td>
@@ -75,26 +75,26 @@ font-size:21px;
     <td>-</td>
   </tr>
   <tr class="funding1" style="font-size: 9px; font-weight: normal;">
-    <th>Special Fund of Fundamental Scientific Research Business Expense for Central Universities (Sub-project for enhancing college students' innovation practice ability)</th>
-    <th>300102218801</th>
-    <th>Feasibility study of shared intelligent parking system</th>
-    <th>2018.2</th>
-    <th>2018.11</th>
-    <th>2,000</th>
-    <th>PI (1st)</th>
-    <th>-</th>
-    <th>-</th>
+    <td>Special Fund of Fundamental Scientific Research Business Expense for Central Universities (Sub-project for enhancing college students' innovation practice ability)</td>
+    <td>300102218801</td>
+    <td>Feasibility study of shared intelligent parking system</td>
+    <td>2018.2</td>
+    <td>2018.11</td>
+    <td>2,000</td>
+    <td>PI (1st)</td>
+    <td>-</td>
+    <td>-</td>
   </tr>
   <tr class="funding1" style="font-size: 9px; font-weight: normal;">
-    <th>The Funded Project for 11th “Challenge Cup” Competition of Chang’an University – Mechanical and Control Group</th>
-    <th>A-P-B-2</th>
-    <th>Adaptive contraflow left-turn lane control study based on application programming interface of traffic simulator</th>
-    <th>2018.7</th>
-    <th>2018.12</th>
-    <th>1,000</th>
-    <th>PI (1st)</th>
-    <th>-</th>
-    <th>-</th>
+    <td>The Funded Project for 11th “Challenge Cup” Competition of Chang’an University – Mechanical and Control Group</td>
+    <td>A-P-B-2</td>
+    <td>Adaptive contraflow left-turn lane control study based on application programming interface of traffic simulator</td>
+    <td>2018.7</td>
+    <td>2018.12</td>
+    <td>1,000</td>
+    <td>PI (1st)</td>
+    <td>-</td>
+    <td>-</td>
   </tr>
 </table>
 
