@@ -67,7 +67,7 @@ Research Board (TRB 2024 Annual Meeting)</i>, January 7-11, 2024, Washington, D.
 
 <div class="btn-toolbar" role="toolbar">
   <div class="btn-group">
-    <a href="#" class="btn btn-video active" onclick="toggleVideoBox()">Video</a>
+    <a href="#" class="btn btn-video active" onclick="playVideo('https://yunqing-jia.github.io/JTRC/assets/JMTR_2019V1.mp4')">Video</a>
     <a href="#" class="btn btn-video active dropdown-toggle" data-toggle="dropdown">
       <span class="caret"></span>
     </a>
