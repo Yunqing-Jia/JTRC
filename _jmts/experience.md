@@ -109,19 +109,13 @@ font-size:21px;
             </div>
             <div class="btn-toolbar" role="toolbar">
                 <div class="btn-group">
-                 <a href="#" class="btn btn-video active" onclick="toggleVideoBox()">Video</a>
+                 <a href="https://yunqing-jia.github.io/JTRC/assets/JMTS_1807V1.mp4" class="btn btn-video active">Video</a>
                  <a href="#" class="btn btn-video active dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></a>
                 <ul class="dropdown-menu">
-                    <li><a href="#" onclick="playVideo('https://yunqing-jia.github.io/JTRC/assets/JMTS_1807V1.mp4')">Video 1</a></li>
-                    <li><a href="#" onclick="playVideo('https://yunqing-jia.github.io/JTRC/assets/JMTS_1807V2.mp4')">Video 2</a></li>
+                    <li><a href="https://yunqing-jia.github.io/JTRC/assets/JMTS_1807V1.mp4" >Video 1</a></li>
+                    <li><a href="https://yunqing-jia.github.io/JTRC/assets/JMTS_1807V2.mp4" >Video 2</a></li>
                 </ul>
                 </div>
-            </div>
-            <div id="video-box" class="video-box" style="display: none; margin-top: 10px;">
-            <video id="video-player" width="640" height="360" controls>
-                <source src="" type="video/mp4">
-                Your browser does not support the video tag.
-            </video>
             </div>
         </div>
     </div>
@@ -211,19 +205,3 @@ font-size:21px;
         </div>
     </div>
 </div>
-
-<script>
-function toggleVideoBox() {
-  const box = document.getElementById('video-box');
-  box.style.display = (box.style.display === 'none') ? 'block' : 'none';
-}
-
-function playVideo(videoUrl) {
-  const box = document.getElementById('video-box');
-  const player = document.getElementById('video-player');
-  player.src = videoUrl;
-  player.load();
-  player.play();
-  box.style.display = 'block';
-}
-</script>
