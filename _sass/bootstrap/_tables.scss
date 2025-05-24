@@ -161,6 +161,9 @@ table {
 @include table-row-variant('warning', $state-warning-bg);
 @include table-row-variant('danger', $state-danger-bg);
 
+@include table-row-variant('funding1', $brand-funding1);
+@include table-row-variant('funding2', $brand-funding2);
+
 
 // Responsive tables
 //
