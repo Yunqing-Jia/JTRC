@@ -14,6 +14,7 @@ font-size:21px;
 [Yangon road network modeling](#jmtr_2021)  
 [Continuous flow intersection (CFI) design & analysis](#jmts_2002)  
 [Signalized roundabout design & analysis](#jmts_1907)  
+[Adaptive contraflow left-turn lane control](#jmts_1807)  
 [Decision choice and revenue optimization model for airport taxi drivers](#jmts_1909)  
 [Airline crew scheduling model](#jmts_2110)  
 [AGV scheduling strategy based on improved A star algorithm in unmanned warehouse](#jmts_2204)  
@@ -87,6 +88,45 @@ font-size:21px;
         </div>
     </div>
 </div>
+
+<a name="jmts_1807"/>
+<br>
+
+#### iii. Adaptive contraflow left-turn lane control
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-4">
+          <img src="/JTRC/jmts/jmts_1807.png" class="center" width='350' height='350'>
+        </div>
+        <div class="col-md-5">
+            <div class="intro">
+            <p>Project code: JMTS_1807</p>
+            <p>Project type: funding motiviation</p>
+            <p>Funding: The Funded Project for 11th “Challenge Cup” Competition of Chang’an University – Mechanical and Control Group under Grant No. A-P-B-2 (Role: PI)</p>
+            <p>Funding name: Adaptive contraflow left-turn lane control study based on application programming interface of traffic simulator</p>
+            <p>Duration: 2018.7 - 2018.12 </p>
+            </div>
+            <div class="btn-toolbar" role="toolbar">
+                <div class="btn-group">
+                 <a href="#" class="btn btn-video active" onclick="toggleVideoBox()">Video</a>
+                 <a href="#" class="btn btn-video active dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                    <li><a href="#" onclick="playVideo('https://yunqing-jia.github.io/JTRC/assets/JMTS_1807V1.mp4')">Video 1</a></li>
+                    <li><a href="#" onclick="playVideo('https://yunqing-jia.github.io/JTRC/assets/JMTS_1807V2.mp4')">Video 2</a></li>
+                </ul>
+                </div>
+            </div>
+            <div id="video-box" class="video-box" style="display: none; margin-top: 10px;">
+            <video id="video-player" width="640" height="360" controls>
+                <source src="" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            </div>
+        </div>
+    </div>
+</div>
+
 
 <a name="jmts_1909"/> 
 <br>
@@ -171,3 +211,19 @@ font-size:21px;
         </div>
     </div>
 </div>
+
+<script>
+function toggleVideoBox() {
+  const box = document.getElementById('video-box');
+  box.style.display = (box.style.display === 'none') ? 'block' : 'none';
+}
+
+function playVideo(videoUrl) {
+  const box = document.getElementById('video-box');
+  const player = document.getElementById('video-player');
+  player.src = videoUrl;
+  player.load();
+  player.play();
+  box.style.display = 'block';
+}
+</script>
