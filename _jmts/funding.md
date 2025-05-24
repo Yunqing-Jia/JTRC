@@ -10,7 +10,7 @@ font-size:21px;
 }
 </style>
 
-<div style="overflow-x: auto; max-width: 100%;">
+<!-- <div style="overflow-x: auto; max-width: 100%;"> -->
 <table>
   <tr class="funding2" style="color: #ffffff; font-size: 15px; font-weight: bold;">
     <th>Supported By</th>
@@ -98,7 +98,7 @@ font-size:21px;
     <td>-</td>
   </tr>
 </table>
-</div>
+<!-- </div> -->
 
 
 
