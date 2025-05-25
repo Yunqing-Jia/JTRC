@@ -65,7 +65,8 @@ font-size:21px;
     <tr>
       <td>5</td>
       <td>
-        <a href="https://store.steampowered.com/app/1127500/Mini_Motorways/">Mini Motorways</a>
+        <p><a href="https://store.steampowered.com/app/1127500/Mini_Motorways/">Mini Motorways</a></p>
+        <p><a href="https://www.youtube.com/playlist?list=PLB_VLCz8KIBJSzldTfk33RFZtE49viKh4" class="btn btn-video active" aria-pressed="true">Video</a></p>
       </td>
       <td>2021</td>
       <td><img src="{{ "/assets/img/minimotor.png" | relative_url }}" class="center" width='250' height='200'></td>
