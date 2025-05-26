@@ -162,11 +162,8 @@ table {
 @include table-row-variant('danger', $state-danger-bg);
 
 @include table-row-variant('funding1', $brand-funding1);
-@include table-row-variant('funding2', $brand-funding2);
+@include table-row-variant('funding2', mix(white, $brand-funding2, 80%));
 
-tr.funding2 {
-  background-color: mix(white, $brand-funding2, 80%) !important;
-}
 
 // Responsive tables
 //
