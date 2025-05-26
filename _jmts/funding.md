@@ -53,7 +53,7 @@ font-size:21px;
     <td>5,000</td>
     <td>PI (1st)</td>
     <td>3rd prize</td>
-    <td><a href="https://yunqing-jia.github.io/JTRC/jmtr/researchtopic//#JMTR_2020">JMTR_2020</a></td>
+    <td><a href="https://yunqing-jia.github.io/JTRC/jmtr/researchtopic/#JMTR_2020">JMTR_2020</a></td>
   </tr>
   <tr class="funding1" style="font-size: 12px; font-weight: normal;">
     <td>S201910710038</td>
@@ -63,7 +63,7 @@ font-size:21px;
     <td>5,000</td>
     <td>PI (1st)</td>
     <td>-</td>
-    <td><a href="https://yunqing-jia.github.io/JTRC/jmtr/researchtopic//#JMTR_2019">JMTR_2019</a></td>
+    <td><a href="https://yunqing-jia.github.io/JTRC/jmtr/researchtopic/#JMTR_2019">JMTR_2019</a></td>
   </tr>
   <tr class="funding1" style="font-size: 12px; font-weight: normal;">
     <td>S201910710047</td>
@@ -95,7 +95,7 @@ font-size:21px;
     <td>1,000</td>
     <td>PI (1st)</td>
     <td>-</td>
-    <td><a href="https://yunqing-jia.github.io/JTRC/jmtr/researchtopic//#JMTR_2019">JMTR_2019</a></td>
+    <td><a href="https://yunqing-jia.github.io/JTRC/jmtr/researchtopic/#JMTR_2019">JMTR_2019</a></td>
   </tr>
 </table>
 <!-- </div> -->
