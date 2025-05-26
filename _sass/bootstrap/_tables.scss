@@ -165,7 +165,7 @@ table {
 @include table-row-variant('funding2', $brand-funding2);
 
 tr.funding2 {
-  background-color: rgba($brand-funding2, 0.86);
+  background-color: rgba($brand-funding2, 0.05);
 }
 
 // Responsive tables
