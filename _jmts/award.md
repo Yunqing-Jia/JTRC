@@ -21,6 +21,6 @@ font-size:21px;
 | 2018 | The 4th College Students' 'Internet+' Innovation and Entrepreneurship Competition of Chang’an University | 2nd | 2nd author | - |
 
 
-<span style="font-family:times; font-size:17px; font-weight:bold; color:black;">Verification: Stationed Evaluation Object of JMTR, JMTS, JMOT, JMOI, JMOE, JMOL (Dispatched by JNSC)</span>
+<span style="font-family:times; font-size:17px; font-weight:bold; color:black;">Verification: Stationed Evaluation Object of JMTR and JMTS (Dispatched by JNEC)</span>
 
 
