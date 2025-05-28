@@ -164,6 +164,8 @@ table {
 @include table-row-variant('funding1', $brand-funding1);
 @include table-row-variant('funding2', mix(white, $brand-funding2, 50%));
 
+@include table-row-variant('patent', mix(white, $brand-patent, 90%));
+
 
 // Responsive tables
 //
