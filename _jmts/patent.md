@@ -11,7 +11,7 @@ font-size:21px;
 </style>
 
 <table>
-  <tr class="patent" style="color: #ffffff; font-size: 15px; font-weight: bold;">
+  <tr class="patent" style="color: #003366; font-size: 15px; font-weight: bold;">
     <th>Name</th>
     <th>Publication Number</th>
     <th>Affiliated JMTS (JMTR) Program</th>
