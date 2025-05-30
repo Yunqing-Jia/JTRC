@@ -47,7 +47,7 @@ font-size:21px;
 <div class="container">
     <div class="row">
         <div class="col-md-4">
-          <img src="/JTRC/assets/img/JMTS_2403A.png" class="center" width='300' height='350'>
+          <img src="/JTRC/jmts/jmts_2403.png" class="center" width='300' height='350'>
         </div>
         <div class="col-md-5">
             <div class="intro">
