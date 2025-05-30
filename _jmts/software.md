@@ -12,7 +12,7 @@ font-size:21px;
 
 ## Table of Contents  
 [A matrix-based coding tool for establishing urban road network topology](#jmts_2202)  
-[A linear programming solver via simplex](#jmts_2403A)  
+[A linear programming solver via simplex](#jmts_2403)  
 
 <a name="jmts_2202"/> 
 <br>
@@ -39,7 +39,7 @@ font-size:21px;
     </div>
 </div>
 
-<a name="jmts_2403A"/> 
+<a name="jmts_2403"/> 
 <br>
 
 ### II. Simplex Method in Python Without Imports
@@ -54,7 +54,7 @@ font-size:21px;
             <p>Project code: JMTS_2403A</p>
             <p>Project type: self motivation</p>
             <p>Open access files: </p>
-            <a href="https://github.com/Yunqing-Jia/JMTS_2403A" class="btn btn-info active" aria-pressed="true">Code</a>
+            <a href="https://github.com/Yunqing-Jia/JMTS_2403" class="btn btn-info active" aria-pressed="true">Code</a>
             </div>
         </div>
     </div>
