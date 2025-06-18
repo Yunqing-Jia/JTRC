@@ -1,6 +1,6 @@
 ---
 title: Traffic Flow Modeling
-permalink: /jmtr/researchtopic/model
+permalink: /jmtr/researchtopic/model/
 ---
 
 
