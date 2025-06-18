@@ -1,22 +1,3 @@
-<style>
-  .submenu {
-    display: none;
-    margin-left: 1.5em;
-  }
-  .submenu.show {
-    display: block;
-  }
-  .arrow {
-    display: inline-block;
-    width: 1em;
-    transition: transform 0.2s;
-    margin-right: 0.3em;
-  }
-  .arrow.down {
-    transform: rotate(90deg);
-  }
-</style>
-
 <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
   {% for section in site.data.jmtr %}
     <div class="panel panel-default">
@@ -36,7 +17,7 @@
         {%- endif -%}
         {%- if item.subpage -%}
           {%- for sub in item.subpage -%}
-            {%- assign sub_url = sub | prepend:"/jmtr/" | append:"/" -%}
+            {%- assign sub_url = sub -%}
             {%- if sub_url == page.url -%}
               {%- assign collapsed = false -%}
             {%- endif -%}
@@ -49,29 +30,16 @@
           {% for item in section.jmtr %}
             {% assign item_url = item.name | prepend:"/jmtr/" | append:"/" %}
             {% assign p = site.jmtr | where:"url", item_url | first %}
-            
+            <a class="list-group-item {% if item_url == page.url %}active{% endif %}" href="{{ p.url | relative_url }}">{{ p.title }}</a>
+
             {% if item.subpage %}
-              {%- assign should_expand = false -%}
               {% for sub in item.subpage %}
-                {% assign sub_url = sub | prepend:"/jmtr/" | append:"/" %}
-                {% if sub_url == page.url %}
-                  {%- assign should_expand = true -%}
+                {% assign sub_url = sub %}
+                {% assign p_sub = site.jmtr | where:"url", sub_url | first %}
+                {% if p_sub %}
+                  <a class="list-group-item {% if sub_url == page.url %}active{% endif %}" style="padding-left: 30px;" href="{{ p_sub.url | relative_url }}">{{ p_sub.title }}</a>
                 {% endif %}
               {% endfor %}
-
-              <div class="list-group-item">
-                <span class="arrow {% if should_expand %}down{% endif %}" onclick="toggleSubmenu(this)">&#9656;</span>
-                <a class="{% if item_url == page.url %}active{% endif %}" href="{{ p.url | relative_url }}">{{ p.title }}</a>
-                <div class="submenu {% if should_expand %}show{% endif %}">
-                  {% for sub in item.subpage %}
-                    {% assign sub_url = sub | prepend:"/jmtr/" | append:"/" %}
-                    {% assign p_sub = site.jmtr | where:"url", sub_url | first %}
-                    <a class="list-group-item {% if sub_url == page.url %}active{% endif %}" href="{{ p_sub.url | relative_url }}">{{ p_sub.title }}</a>
-                  {% endfor %}
-                </div>
-              </div>
-            {% else %}
-              <a class="list-group-item {% if item_url == page.url %}active{% endif %}" href="{{ p.url | relative_url }}">{{ p.title }}</a>
             {% endif %}
           {% endfor %}
         </div>
@@ -79,11 +47,3 @@
     </div>
   {% endfor %}
 </div>
-
-<script>
-  function toggleSubmenu(arrow) {
-    const submenu = arrow.parentElement.querySelector('.submenu');
-    submenu.classList.toggle('show');
-    arrow.classList.toggle('down');
-  }
-</script>
