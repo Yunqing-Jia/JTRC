@@ -8,19 +8,37 @@
           </a>
         </h4>
       </div>
-      {% assign collapsed = true %}
-      {% for item in section.jmtr %}
-        {% assign item_url = item | prepend:"/jmtr/" | append:"/" %}
-        {% if item_url == page.url %}
-          {% assign collapsed = false %}
-        {% endif %}
-      {% endfor %}
+
+      {%- assign collapsed = true -%}
+      {%- for item in section.jmtr -%}
+        {%- assign item_url = item.name | prepend:"/jmtr/" | append:"/" -%}
+        {%- if item_url == page.url -%}
+          {%- assign collapsed = false -%}
+        {%- endif -%}
+        {%- if item.subpage -%}
+          {%- for sub in item.subpage -%}
+            {%- assign sub_url = sub | prepend:"/jmtr/" | append:"/" -%}
+            {%- if sub_url == page.url -%}
+              {%- assign collapsed = false -%}
+            {%- endif -%}
+          {%- endfor -%}
+        {%- endif -%}
+      {%- endfor -%}
+
       <div class="panel-collapse{% if collapsed %} collapse{% endif %}" id="collapse-{{forloop.index}}" role="tabpanel" aria-label="Side Navigation">
         <div class="list-group">
           {% for item in section.jmtr %}
-            {% assign item_url = item | prepend:"/jmtr/" | append:"/" %}
+            {% assign item_url = item.name | prepend:"/jmtr/" | append:"/" %}
             {% assign p = site.jmtr | where:"url", item_url | first %}
-            <a class="list-group-item {% if item_url == page.url %}active{% endif %}" href="{{ p.url  | relative_url }}">{{ p.title }}</a>
+            <a class="list-group-item {% if item_url == page.url %}active{% endif %}" href="{{ p.url | relative_url }}">{{ p.title }}</a>
+
+            {% if item.subpage %}
+              {% for sub in item.subpage %}
+                {% assign sub_url = sub | prepend:"/jmtr/" | append:"/" %}
+                {% assign p_sub = site.jmtr | where:"url", sub_url | first %}
+                <a class="list-group-item {% if sub_url == page.url %}active{% endif %}" style="padding-left: 30px;" href="{{ p_sub.url | relative_url }}">{{ p_sub.title }}</a>
+              {% endfor %}
+            {% endif %}
           {% endfor %}
         </div>
       </div>
