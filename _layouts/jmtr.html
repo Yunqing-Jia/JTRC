@@ -25,3 +25,23 @@ layout: default
 
     </div>
 </div>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    document.querySelectorAll("[data-toggle='sublist']").forEach(function(parentLink) {
+      parentLink.addEventListener("click", function(event) {
+        const targetId = parentLink.getAttribute("data-target");
+        const sublist = document.getElementById(targetId);
+
+        if (sublist) {
+          event.preventDefault();  
+          if (sublist.style.display === "none") {
+            sublist.style.display = "block";
+          } else {
+            sublist.style.display = "none";
+          }
+        }
+      });
+    });
+  });
+</script>
