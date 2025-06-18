@@ -3,9 +3,9 @@
   - name: index
   - name: researchtopic
     subpage:
-        - /jmtr/researchtopic/aiml
-        - /jmtr/researchtopic/model
-        - /jmtr/researchtopic/optimization
+        - /jmtr/researchtopic/aiml/
+        - /jmtr/researchtopic/model/
+        - /jmtr/researchtopic/optimization/
   - name: journalpaper
   - name: conference
   - name: thesis
