@@ -30,16 +30,33 @@
           {% for item in section.jmtr %}
             {% assign item_url = item.name | prepend:"/jmtr/" | append:"/" %}
             {% assign p = site.jmtr | where:"url", item_url | first %}
-            <a class="list-group-item {% if item_url == page.url %}active{% endif %}" href="{{ p.url | relative_url }}">{{ p.title }}</a>
 
-            {% if item.subpage %}
+            {% assign has_subpage = item.subpage %}
+            {% assign sub_active = false %}
+            {% if has_subpage %}
               {% for sub in item.subpage %}
-                {% assign sub_url = sub %}
-                {% assign p_sub = site.jmtr | where:"url", sub_url | first %}
-                {% if p_sub %}
-                  <a class="list-group-item {% if sub_url == page.url %}active{% endif %}" style="padding-left: 30px;" href="{{ p_sub.url | relative_url }}">{{ p_sub.title }}</a>
+                {% if sub == page.url %}
+                  {% assign sub_active = true %}
                 {% endif %}
               {% endfor %}
+            {% endif %}
+
+            {% if has_subpage %}
+              <div class="list-group-item{% if item_url == page.url or sub_active %} active-parent{% endif %}">
+                <span class="arrow" onclick="toggleSubmenu(this)">&#9656;</span>
+                <a class="{% if item_url == page.url %}active{% endif %}" href="{{ p.url | relative_url }}">{{ p.title }}</a>
+                <div class="submenu" style="{% if sub_active %}display:block;{% else %}display:none;{% endif %}">
+                  {% for sub in item.subpage %}
+                    {% assign sub_url = sub %}
+                    {% assign p_sub = site.jmtr | where:"url", sub_url | first %}
+                    {% if p_sub %}
+                      <a class="list-group-item {% if sub_url == page.url %}active{% endif %}" style="padding-left: 30px;" href="{{ p_sub.url | relative_url }}">{{ p_sub.title }}</a>
+                    {% endif %}
+                  {% endfor %}
+                </div>
+              </div>
+            {% else %}
+              <a class="list-group-item {% if item_url == page.url %}active{% endif %}" href="{{ p.url | relative_url }}">{{ p.title }}</a>
             {% endif %}
           {% endfor %}
         </div>
@@ -47,3 +64,38 @@
     </div>
   {% endfor %}
 </div>
+
+<style>
+  .arrow {
+    display: inline-block;
+    cursor: pointer;
+    width: 1em;
+    margin-right: 5px;
+    transform: rotate(0deg);
+    transition: transform 0.2s;
+  }
+  .arrow.down {
+    transform: rotate(90deg);
+  }
+  .active-parent > a {
+    font-weight: bold;
+  }
+</style>
+
+<script>
+  function toggleSubmenu(elem) {
+    const submenu = elem.parentElement.querySelector(".submenu");
+    submenu.style.display = submenu.style.display === "block" ? "none" : "block";
+    elem.classList.toggle("down");
+  }
+
+  document.addEventListener("DOMContentLoaded", () => {
+    document.querySelectorAll(".submenu").forEach((menu) => {
+      if (menu.querySelector(".active")) {
+        menu.style.display = "block";
+        const arrow = menu.parentElement.querySelector(".arrow");
+        if (arrow) arrow.classList.add("down");
+      }
+    });
+  });
+</script>
