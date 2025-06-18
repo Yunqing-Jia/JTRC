@@ -3,7 +3,7 @@
     <div class="panel panel-default">
       <div class="panel-heading">
         <h4 class="panel-title">
-          <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse-{{ forloop.index }}" aria-expanded="false" aria-controls="collapse-{{ forloop.index }}">
+          <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse-{{forloop.index}}" aria-expanded="false" aria-controls="collapse-{{forloop.index}}">
             {{ section.title }}
           </a>
         </h4>
@@ -25,49 +25,22 @@
         {%- endif -%}
       {%- endfor -%}
 
-      <div class="panel-collapse{% if collapsed %} collapse{% endif %}" id="collapse-{{ forloop.index }}" role="tabpanel" aria-label="Side Navigation">
+      <div class="panel-collapse{% if collapsed %} collapse{% endif %}" id="collapse-{{forloop.index}}" role="tabpanel" aria-label="Side Navigation">
         <div class="list-group">
           {% for item in section.jmtr %}
-            {%- assign item_url = item.name | prepend:"/jmtr/" | append:"/" -%}
-            {%- assign p = site.jmtr | where:"url", item_url | first -%}
-            {%- assign has_sub = item.subpage -%}
-            {%- assign is_expanded = false -%}
-            {%- if page.url == item_url -%}
-              {%- assign is_expanded = true -%}
-            {%- else %}
-              {%- if has_sub %}
-                {%- for sub in item.subpage %}
-                  {%- assign sub_url = sub -%}
-                  {%- if sub_url == page.url %}
-                    {%- assign is_expanded = true -%}
-                  {%- endif -%}
-                {%- endfor -%}
-              {%- endif -%}
-            {%- endif -%}
-            
-            <!-- title & subpage -->
-            <div class="d-flex justify-content-between align-items-center">
-              <a class="list-group-item {% if item_url == page.url %}active{% endif %}" href="{{ p.url | relative_url }}">
-                {{ p.title }}
-              </a>
-              {% if has_sub %}
-                <span class="toggle-sub" data-target="sublist-{{ forloop.index }}" style="cursor: pointer; margin-left: -30px;">
-                  &#9660;
-                </span>
-              {% endif %}
-            </div>
-            
-            {% if has_sub %}
-            <div id="sublist-{{ forloop.index }}" class="sublist" style="margin-left: 1em; display: none;">
+            {% assign item_url = item.name | prepend:"/jmtr/" | append:"/" %}
+            {% assign p = site.jmtr | where:"url", item_url | first %}
+            <a class="list-group-item {% if item_url == page.url %}active{% endif %}" href="{{ p.url | relative_url }}">{{ p.title }}</a>
+
+            {% if item.subpage %}
               {% for sub in item.subpage %}
-                {% assign p_sub = site.jmtr | where:"url", sub | first %}
-                <a class="list-group-item {% if sub == page.url %}active{% endif %}" style="padding-left: 30px;" href="{{ p_sub.url | relative_url }}">
-                  {{ p_sub.title }}
-                </a>
+                {% assign sub_url = sub %}
+                {% assign p_sub = site.jmtr | where:"url", sub_url | first %}
+                {% if p_sub %}
+                  <a class="list-group-item {% if sub_url == page.url %}active{% endif %}" style="padding-left: 30px;" href="{{ p_sub.url | relative_url }}">{{ p_sub.title }}</a>
+                {% endif %}
               {% endfor %}
-            </div>
             {% endif %}
-            
           {% endfor %}
         </div>
       </div>
