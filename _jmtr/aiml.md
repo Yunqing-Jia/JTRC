@@ -1,6 +1,6 @@
 ---
 title: AI & ML in Transportation
-permalink: /jmtr/researchtopic/aiml
+permalink: /jmtr/researchtopic/aiml/
 ---
 
 
