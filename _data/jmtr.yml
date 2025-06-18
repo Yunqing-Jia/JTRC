@@ -1,9 +1,13 @@
 - title: JMTR
   jmtr:
-  - index
-  - researchtopic
-  - journalpaper
-  - conference
-  - thesis
+  - name: index
+  - name: researchtopic
+    subpage:
+        - aiml
+        - model
+        - optimization
+  - name: journalpaper
+  - name: conference
+  - name: thesis
 
 
