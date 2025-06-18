@@ -20,4 +20,27 @@
 
 </body>
 
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+  document.querySelectorAll(".toggle-sub").forEach(function(toggle) {
+    toggle.addEventListener("click", function(event) {
+      
+      event.preventDefault();
+      event.stopPropagation();
+      var targetId = toggle.getAttribute("data-target");
+      var sublist = document.getElementById(targetId);
+      if(sublist) {
+        if(sublist.style.display === "none" || sublist.style.display === "") {
+          sublist.style.display = "block";
+          toggle.innerHTML = "&#9650;"; 
+        } else {
+          sublist.style.display = "none";
+          toggle.innerHTML = "&#9660;"; 
+        }
+      }
+    });
+  });
+});
+</script>
+
 </html>
