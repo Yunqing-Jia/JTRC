@@ -1,6 +1,6 @@
 ---
 title: Traffic Signal Optimization
-permalink: /jmtr/researchtopic/optimization
+permalink: /jmtr/researchtopic/optimization/
 ---
 
 
