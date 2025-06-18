@@ -24,7 +24,6 @@
 document.addEventListener("DOMContentLoaded", function() {
   document.querySelectorAll(".toggle-sub").forEach(function(toggle) {
     toggle.addEventListener("click", function(event) {
-      
       event.preventDefault();
       event.stopPropagation();
       var targetId = toggle.getAttribute("data-target");
@@ -32,10 +31,10 @@ document.addEventListener("DOMContentLoaded", function() {
       if(sublist) {
         if(sublist.style.display === "none" || sublist.style.display === "") {
           sublist.style.display = "block";
-          toggle.innerHTML = "&#9650;"; 
+          toggle.innerHTML = "&#9650;";
         } else {
           sublist.style.display = "none";
-          toggle.innerHTML = "&#9660;"; 
+          toggle.innerHTML = "&#9660;";
         }
       }
     });
