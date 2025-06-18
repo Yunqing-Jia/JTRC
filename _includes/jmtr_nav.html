@@ -43,8 +43,10 @@
 
             {% if has_subpage %}
               <div class="list-group-item{% if item_url == page.url or sub_active %} active-parent{% endif %}">
-                <span class="arrow" onclick="toggleSubmenu(this)">&#9656;</span>
-                <a class="{% if item_url == page.url %}active{% endif %}" href="{{ p.url | relative_url }}">{{ p.title }}</a>
+                <span class="arrow {% if sub_active %}down{% endif %}" onclick="toggleSubmenu(this)">&#9656;</span>
+                <span class="submenu-label" onclick="toggleSubmenu(this.previousElementSibling)">
+                  {{ p.title }}
+                </span>
                 <div class="submenu" style="{% if sub_active %}display:block;{% else %}display:none;{% endif %}">
                   {% for sub in item.subpage %}
                     {% assign sub_url = sub %}
@@ -78,6 +80,14 @@
     transform: rotate(90deg);
   }
   .active-parent > a {
+    font-weight: bold;
+  }
+  .submenu-label {
+  cursor: pointer;
+  color: #333;
+  margin-left: 5px;
+}
+  .active-parent .submenu-label {
     font-weight: bold;
   }
 </style>
