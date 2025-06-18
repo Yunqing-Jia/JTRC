@@ -17,7 +17,7 @@
         {%- endif -%}
         {%- if item.subpage -%}
           {%- for sub in item.subpage -%}
-            {%- assign sub_url = sub | prepend:"/jmtr/" | append:"/" -%}
+            {%- assign sub_url = sub -%}
             {%- if sub_url == page.url -%}
               {%- assign collapsed = false -%}
             {%- endif -%}
@@ -34,9 +34,11 @@
 
             {% if item.subpage %}
               {% for sub in item.subpage %}
-                {% assign sub_url = sub | prepend:"/jmtr/" | append:"/" %}
+                {% assign sub_url = sub %}
                 {% assign p_sub = site.jmtr | where:"url", sub_url | first %}
-                <a class="list-group-item {% if sub_url == page.url %}active{% endif %}" style="padding-left: 30px;" href="{{ p_sub.url | relative_url }}">{{ p_sub.title }}</a>
+                {% if p_sub %}
+                  <a class="list-group-item {% if sub_url == page.url %}active{% endif %}" style="padding-left: 30px;" href="{{ p_sub.url | relative_url }}">{{ p_sub.title }}</a>
+                {% endif %}
               {% endfor %}
             {% endif %}
           {% endfor %}
