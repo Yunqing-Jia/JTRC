@@ -27,13 +27,11 @@
 
       <div class="panel-collapse{% if collapsed %} collapse{% endif %}" id="collapse-{{forloop.index}}" role="tabpanel" aria-label="Side Navigation">
         <div class="list-group">
-          {% for item in section.jmtr %}
+          {% for item in site.data.jmtr[0].jmtr %}
             {% assign item_url = item.name | prepend:"/jmtr/" | append:"/" %}
             {% assign p = site.jmtr | where:"url", item_url | first %}
-
-            {% assign has_subpage = item.subpage %}
             {% assign sub_active = false %}
-            {% if has_subpage %}
+            {% if item.subpage %}
               {% for sub in item.subpage %}
                 {% if sub == page.url %}
                   {% assign sub_active = true %}
@@ -41,24 +39,23 @@
               {% endfor %}
             {% endif %}
 
-            {% if has_subpage %}
-              <div class="list-group-item{% if item_url == page.url or sub_active %} active-parent{% endif %}">
-                <span class="arrow {% if sub_active %}down{% endif %}" onclick="toggleSubmenu(this)">&#9656;</span>
-                <span class="submenu-label" onclick="toggleSubmenu(this.previousElementSibling)">
-                  {{ p.title }}
-                </span>
-                <div class="submenu" style="{% if sub_active %}display:block;{% else %}display:none;{% endif %}">
-                  {% for sub in item.subpage %}
-                    {% assign sub_url = sub %}
-                    {% assign p_sub = site.jmtr | where:"url", sub_url | first %}
-                    {% if p_sub %}
-                      <a class="list-group-item {% if sub_url == page.url %}active{% endif %}" style="padding-left: 30px;" href="{{ p_sub.url | relative_url }}">{{ p_sub.title }}</a>
-                    {% endif %}
-                  {% endfor %}
-                </div>
+            {% if item.subpage %}
+              <div class="list-group-item submenu-toggle {% if item_url == page.url or sub_active %}active{% endif %}" onclick="toggleSubmenu(this)">
+                <span class="arrow {% if sub_active %}down{% endif %}">&#9656;</span>
+                {{ p.title }}
+              </div>
+              <div class="submenu" style="{% if sub_active %}display:block;{% else %}display:none;{% endif %}">
+                {% for sub in item.subpage %}
+                  {% assign p_sub = site.jmtr | where:"url", sub | first %}
+                  {% if p_sub %}
+                    <a class="list-group-item {% if sub == page.url %}active{% endif %}" style="padding-left: 30px;" href="{{ p_sub.url | relative_url }}">{{ p_sub.title }}</a>
+                  {% endif %}
+                {% endfor %}
               </div>
             {% else %}
-              <a class="list-group-item {% if item_url == page.url %}active{% endif %}" href="{{ p.url | relative_url }}">{{ p.title }}</a>
+              <a class="list-group-item {% if item_url == page.url %}active{% endif %}" href="{{ p.url | relative_url }}">
+                {{ p.title }}
+              </a>
             {% endif %}
           {% endfor %}
         </div>
@@ -68,44 +65,33 @@
 </div>
 
 <style>
-  .arrow {
-    display: inline-block;
-    cursor: pointer;
-    width: 1em;
-    margin-right: 5px;
-    transform: rotate(0deg);
-    transition: transform 0.2s;
-  }
-  .arrow.down {
-    transform: rotate(90deg);
-  }
-  .active-parent > a {
-    font-weight: bold;
-  }
-  .submenu-label {
-  cursor: pointer;
-  color: #333;
-  margin-left: 5px;
+.arrow {
+  display: inline-block;
+  width: 10px;
+  transition: transform 0.2s ease;
+  margin-right: 5px;
 }
-  .active-parent .submenu-label {
-    font-weight: bold;
-  }
+.arrow.down {
+  transform: rotate(90deg);
+}
+.submenu {
+  padding-left: 15px;
+}
+.submenu-toggle {
+  cursor: pointer;
+}
 </style>
 
 <script>
-  function toggleSubmenu(elem) {
-    const submenu = elem.parentElement.querySelector(".submenu");
-    submenu.style.display = submenu.style.display === "block" ? "none" : "block";
-    elem.classList.toggle("down");
+function toggleSubmenu(el) {
+  var arrow = el.querySelector(".arrow");
+  var submenu = el.nextElementSibling;
+  if (submenu.style.display === "block") {
+    submenu.style.display = "none";
+    arrow.classList.remove("down");
+  } else {
+    submenu.style.display = "block";
+    arrow.classList.add("down");
   }
-
-  document.addEventListener("DOMContentLoaded", () => {
-    document.querySelectorAll(".submenu").forEach((menu) => {
-      if (menu.querySelector(".active")) {
-        menu.style.display = "block";
-        const arrow = menu.parentElement.querySelector(".arrow");
-        if (arrow) arrow.classList.add("down");
-      }
-    });
-  });
+}
 </script>
