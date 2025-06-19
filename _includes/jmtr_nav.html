@@ -40,9 +40,8 @@
             {% endif %}
 
             {% if item.subpage %}
-              <a href="{{ p.url | relative_url }}" class="list-group-item submenu-toggle {% if item_url == page.url or sub_active %}active{% endif %}" onclick="handleSubmenuClick(event, this)">
-                <span class="arrow {% if sub_active %}down{% endif %}">&#9656;</span>
-                {{ p.title }}
+              <a href="{{ p.url | relative_url }}" onclick="handleSubmenuClick(event, this, '{{ p.url | relative_url }}')">
+                <span class="arrow {% if expanded %}down{% endif %}"></span> {{ p.title }}
               </a>
               <div class="submenu" style="{% if sub_active %}display:block;{% else %}display:none;{% endif %}">
                 {% for sub in item.subpage %}
@@ -84,24 +83,28 @@
 
 <script>
 function handleSubmenuClick(event, el) {
-  event.preventDefault(); 
+function handleSubmenuClick(event, el, targetUrl) {
+  event.preventDefault(); // 
 
-  var arrow = el.querySelector(".arrow");
-  var submenu = el.nextElementSibling;
+  const currentUrl = window.location.pathname.replace(/\/$/, ""); // 当前路径
+  const targetPath = targetUrl.replace(/\/$/, ""); // 
 
-  var isExpanded = submenu.style.display === "block";
+  if (currentUrl === targetPath) {
+    // 
+    const arrow = el.querySelector(".arrow");
+    const submenu = el.nextElementSibling;
+    const isExpanded = submenu.style.display === "block";
 
-  
-  if (isExpanded) {
-    submenu.style.display = "none";
-    arrow.classList.remove("down");
+    if (isExpanded) {
+      submenu.style.display = "none";
+      arrow.classList.remove("down");
+    } else {
+      submenu.style.display = "block";
+      arrow.classList.add("down");
+    }
   } else {
-    submenu.style.display = "block";
-    arrow.classList.add("down");
+    // 
+    window.location.href = targetUrl;
   }
-
-  
-  const href = el.getAttribute("href");
-  window.location.href = href;
 }
 </script>
