@@ -40,10 +40,10 @@
             {% endif %}
 
             {% if item.subpage %}
-              <div class="list-group-item submenu-toggle {% if item_url == page.url or sub_active %}active{% endif %}" onclick="toggleSubmenu(this)">
+              <a href="{{ p.url | relative_url }}" class="list-group-item submenu-toggle {% if item_url == page.url or sub_active %}active{% endif %}" onclick="handleSubmenuClick(event, this)">
                 <span class="arrow {% if sub_active %}down{% endif %}">&#9656;</span>
                 {{ p.title }}
-              </div>
+              </a>
               <div class="submenu" style="{% if sub_active %}display:block;{% else %}display:none;{% endif %}">
                 {% for sub in item.subpage %}
                   {% assign p_sub = site.jmtr | where:"url", sub | first %}
@@ -83,15 +83,25 @@
 </style>
 
 <script>
-function toggleSubmenu(el) {
+function handleSubmenuClick(event, el) {
+  event.preventDefault(); 
+
   var arrow = el.querySelector(".arrow");
   var submenu = el.nextElementSibling;
-  if (submenu.style.display === "block") {
+
+  var isExpanded = submenu.style.display === "block";
+
+  
+  if (isExpanded) {
     submenu.style.display = "none";
     arrow.classList.remove("down");
   } else {
     submenu.style.display = "block";
     arrow.classList.add("down");
   }
+
+  
+  const href = el.getAttribute("href");
+  window.location.href = href;
 }
 </script>
