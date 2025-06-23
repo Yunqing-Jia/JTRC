@@ -11,9 +11,10 @@ font-size:21px;
 </style>
 
 ## Table of Contents  
-[A matrix-based coding tool for establishing urban road network topology](#jmts_2202) 
-[A linear programming solver via import-free simplex method](#jmts_2403)
-[A visualizer of network shortest path](#jmts_2404)
+- [A matrix-based coding tool for establishing urban road network topology](#jmts_2202)  
+- [A linear programming solver via import-free simplex method](#jmts_2403)  
+- [A visualizer of network shortest path](#jmts_2404)  
+
 
 <a name="jmts_2202"/> 
 <br>
@@ -68,10 +69,10 @@ font-size:21px;
 
 <div class="container">
     <div class="row">
-        <div class="col-md-5">
-          <img src="/JTRC/jmts/jmts_2404.png" class="center" width='300' height='200'>
-        </div>
         <div class="col-md-4">
+          <img src="/JTRC/jmts/jmts_2404.png" class="center" width='350' height='300'>
+        </div>
+        <div class="col-md-5">
             <div class="intro">
             <p>Project code: JMTS_2404</p>
             <p>Project type: self motivation</p>
