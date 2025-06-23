@@ -68,10 +68,10 @@ font-size:21px;
 
 <div class="container">
     <div class="row">
-        <div class="col-md-6">
-          <img src="/JTRC/jmts/jmts_2404.png" class="center" width='350' height='300'>
+        <div class="col-md-5">
+          <img src="/JTRC/jmts/jmts_2404.png" class="center" width='300' height='200'>
         </div>
-        <div class="col-md-3">
+        <div class="col-md-4">
             <div class="intro">
             <p>Project code: JMTS_2404</p>
             <p>Project type: self motivation</p>
