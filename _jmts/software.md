@@ -12,7 +12,8 @@ font-size:21px;
 
 ## Table of Contents  
 [A matrix-based coding tool for establishing urban road network topology](#jmts_2202)  
-[A linear programming solver via import-free simplex method](#jmts_2403)  
+[A linear programming solver via import-free simplex method](#jmts_2403) 
+[A visualizer of network shortest path](#jmts_2404)  
 
 <a name="jmts_2202"/> 
 <br>
@@ -51,10 +52,31 @@ font-size:21px;
         </div>
         <div class="col-md-5">
             <div class="intro">
-            <p>Project code: JMTS_2403A</p>
+            <p>Project code: JMTS_2403</p>
             <p>Project type: self motivation</p>
-            <p>Open access files: </p>
             <a href="https://github.com/Yunqing-Jia/JMTS_2403" class="btn btn-info active" aria-pressed="true">Code</a>
+            <a href="https://yunqing-jia.github.io/JMTS_2403/" class="btn btn-video active" aria-pressed="true">GUI</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<a name="jmts_2404"/> 
+<br>
+
+### III. A visualizer of network shortest path
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-6">
+          <img src="/JTRC/jmts/jmts_2404.png" class="center" width='350' height='300'>
+        </div>
+        <div class="col-md-3">
+            <div class="intro">
+            <p>Project code: JMTS_2404</p>
+            <p>Project type: self motivation</p>
+            <a href="https://github.com/Yunqing-Jia/JMTS_2404" class="btn btn-info active" aria-pressed="true">Code</a>
+            <a href="https://yunqing-jia.github.io/JMTS_2404/" class="btn btn-video active" aria-pressed="true">GUI</a>
             </div>
         </div>
     </div>
