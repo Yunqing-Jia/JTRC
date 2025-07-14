@@ -1,6 +1,6 @@
 ---
 title: Curriculum Vitae (CV)
-permalink: /more/cv/
+permalink: /introduction/cv/
 ---
 
 <style>
