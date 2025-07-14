@@ -1,6 +1,6 @@
 ---
 title: Links & Network
-permalink: /more/interlink/
+permalink: /introduction/interlink/
 ---
 
 <style>
