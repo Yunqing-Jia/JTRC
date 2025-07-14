@@ -1,6 +1,6 @@
 ---
 title: Self Supervision
-permalink: /more/supervision/
+permalink: /introduction/supervision/
 ---
 
 <style>
