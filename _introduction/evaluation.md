@@ -1,6 +1,6 @@
 ---
 title: Self Evaluation
-permalink: /more/evaluation/
+permalink: /introduction/evaluation/
 ---
 
 
