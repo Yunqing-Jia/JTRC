@@ -18,16 +18,16 @@ font-size:21px;
 </div>
 
 ### Github Activity Metrics
-<div style="display: flex; gap: 10px; flex-wrap: wrap;">
+<div style="display: flex; gap: 5px; flex-wrap: wrap;">
   <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=Yunqing-Jia&layout=compact&theme=blueberry" alt="Top Langs">
   <img src="https://raw.githubusercontent.com/Yunqing-Jia/github-stats/master/generated/languages.svg#gh-dark-mode-only" alt="Langs">
 </div>
 
 <br>
 
-<div style="display: flex; gap: 10px; flex-wrap: wrap;">
+<div style="display: flex; gap: 5px; flex-wrap: wrap;">
   <img src="https://raw.githubusercontent.com/Yunqing-Jia/github-stats/master/generated/overview.svg#gh-dark-mode-only" alt="GitHub Stats">
-  <img src="[https://raw.githubusercontent.com/Yunqing-Jia/github-stats/master/generated/overview.svg#gh-dark-mode-only](https://github-readme-stats.vercel.app/api?username=Yunqing-Jia&show_icons=true&theme=react&rank_icon=percentile&hide=stars,prs&show=reviews&include_all_commits=true)" alt="GitHub Stats 2">
+  <img src="https://github-readme-stats.vercel.app/api?username=Yunqing-Jia&show_icons=true&theme=react&rank_icon=percentile&hide=stars,prs&show=reviews&include_all_commits=true" alt="GitHub Stats 2">
 </div>
 
 <br>
