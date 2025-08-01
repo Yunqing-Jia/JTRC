@@ -20,13 +20,13 @@ font-size:21px;
 ### Github Activity Metrics
 <div style="display: flex; gap: 5px; flex-wrap: wrap;">
   <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=Yunqing-Jia&layout=compact&theme=blueberry" alt="Top Langs">
-  <img src="https://raw.githubusercontent.com/Yunqing-Jia/github-stats/master/generated/languages.svg#gh-dark-mode-only" alt="Langs">
+  <img src="https://raw.githubusercontent.com/Yunqing-Jia/JMOI_2508/master/generated/languages.svg#gh-dark-mode-only" alt="Langs">
 </div>
 
 <br>
 
 <div style="display: flex; gap: 5px; flex-wrap: wrap;">
-  <img src="https://raw.githubusercontent.com/Yunqing-Jia/github-stats/master/generated/overview.svg#gh-dark-mode-only" alt="GitHub Stats">
+  <img src="https://raw.githubusercontent.com/Yunqing-Jia/JMOI_2508/master/generated/overview.svg#gh-dark-mode-only" alt="GitHub Stats">
   <img src="https://github-readme-stats.vercel.app/api?username=Yunqing-Jia&show_icons=true&theme=react&rank_icon=percentile&hide=stars,prs&show=reviews&include_all_commits=true" alt="GitHub Stats 2">
 </div>
 
