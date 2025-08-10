@@ -35,11 +35,10 @@ font-size:21px;
 </ul>
 <div id="myTabContent" class="tab-content">
   <div class="tab-pane fade active in" id="rtshome">
-    <img src="/JTRC/jmtr/rts_gan.png">
+    <img src="https://raw.githubusercontent.com/Yunqing-Jia/JMTS_2504/main/rts_gan.png">
     <br>
     <p><div style="font-size: 16px;"> JMTR_2204: Joint optimization of TOD intervals and robust signal timing for isolated intersection. </div></p>
     <p><div style="font-size: 14px;"> Keywords: Bi-level optimization, Arrival-departure curve, BLEAQ_II algorithm, SUMO. </div></p>
-    <p><div style="font-size: 16px;"> JMTR_2305: Joint optimization of TOD intervals and robust signal timings for network-level intersections</div></p>
   </div>
   <div class="tab-pane fade" id="rtspre"> 
     <p><div style="font-size: 16px;"> [1 | JMTR_2204] <b>Jia, Y.</b>, An, C. (*), Lu, Z., & Xia, J. (2023). Joint optimization of time-of-day intervals and robust signal timing for isolated intersection. <i>23rd COTA International Conference of Transportation Professionals (CICTP2023)</i>, July 14-17, 2023, Beijing, China </div></p>
@@ -54,7 +53,7 @@ font-size:21px;
 <div class="container">
     <div class="row">
         <div class="col-md-4">
-          <img src="/JTRC/jmtr/cll_ind.png" class="center" width='350' height='350'>
+          <img src="https://raw.githubusercontent.com/Yunqing-Jia/JMTS_2504/main/cll_ind.png" class="center" width='350' height='350'>
         </div>
         <div class="col-md-5">
             <div class="intro">
@@ -75,7 +74,7 @@ font-size:21px;
 </ul>
 <div id="myTabContent" class="tab-content">
   <div class="tab-pane fade active in" id="cll">
-    <img src="/JTRC/jmtr/cll_gan.png">
+    <img src="https://raw.githubusercontent.com/Yunqing-Jia/JMTS_2504/main/cll_gan.png">
     <br>
     <p><div style="font-size: 16px;">JMTR_2019: Traffic signal optimization for the isolated intersection with CLL </div></p>
     <p><div style="font-size: 14px;"> Keywords: queue accumulation polygon, Genetic algorithm. </div></p>
@@ -145,6 +144,17 @@ font-size:21px;
               <td>PI</td>
               <td>-</td>
               <td>2019.7-2020.12</td>
+            </tr>
+          </tbody>
+          <tbody>
+            <tr>
+              <td>3</td>
+              <td>JMTR_2019</td>
+              <td>The Funded Project for 11th “Challenge Cup” Competition of Chang’an University – Mechanical and Control Group</td>
+              <td>A-P-B-2</td>
+              <td>PI</td>
+              <td>-</td>
+              <td>2018.7-2018.12</td>
             </tr>
           </tbody>
         </table>
