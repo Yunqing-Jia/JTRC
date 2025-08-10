@@ -3,7 +3,6 @@ title: Traffic Signal Optimization
 permalink: /jmtr/researchtopic/optimization/
 ---
 
-
 <style>
 .intro{
 font-family:times;
@@ -11,7 +10,10 @@ font-size:21px;
 }
 </style>
 
-### i. Robust time-of-day traffic signal control (JMTR_2204, JMTR_2305) 
+<a name="JMTR_2204"/>
+<br>
+
+### i. Robust time-of-day traffic signal control (JMTR_2204) 
 
 <div class="container">
     <div class="row">
