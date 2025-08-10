@@ -11,7 +11,6 @@ font-size:21px;
 }
 </style>
 
-## Traffic signal optimization
 ### i. Robust time-of-day traffic signal control (JMTR_2204, JMTR_2305) 
 
 <div class="container">
@@ -148,8 +147,8 @@ font-size:21px;
           </tbody>
           <tbody>
             <tr>
-              <td>3</td>
-              <td>JMTR_2019</td>
+              <td> </td>
+              <td> </td>
               <td>The Funded Project for 11th “Challenge Cup” Competition of Chang’an University – Mechanical and Control Group</td>
               <td>A-P-B-2</td>
               <td>PI</td>
