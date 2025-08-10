@@ -42,6 +42,9 @@ font-size:21px;
   title={An integrated intra-view and inter-view framework for multiple traffic variable data simultaneous recovery},
   author={He, Yang and Jia, Yuheng and Jia, Yunqing and An, Chengchuan and Lu, Zhenbo and Xia, Jingxin},
   journal={IEEE Transactions on Intelligent Transportation Systems},
+  volume={25},
+  number={11},
+  pages={17200--17217},
   year={2024},
   publisher={IEEE}
 }
