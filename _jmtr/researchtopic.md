@@ -10,70 +10,54 @@ font-size:21px;
 }
 </style>
 
-## Overview - JMTR Program Group
+## Overview - JMTR Program Group (Chronological Order)
 <table class="table table-striped table-hover ">
   <thead>
     <tr>
       <th>#</th>
-      <th>Name</th>
-      <th>Ongoing Program</th>
-      <th>Historical Program</th>
+      <th>Topic</th>
+      <th>Sub-topic</th>
+      <th>Period</th>
     </tr>
   </thead>
   <tbody>
     <tr class="success">
-      <td>1</td>
-      <td>Multi-modal mixed traffic flow modeling under connected environment</td>
-      <td><a href="#JMTR_2301">JMTR_2301</a></td>
+      <td><a href="https://yunqing-jia.github.io/JTRC/jmtr/thesis/#JMTR_2301">JMTR_2301</a></td>
+      <td>Joint Optimization of Connected Bus Trajectories & Traffic Signals</td>
+      <td>
+      <a href="https://yunqing-jia.github.io/JTRC/jmtr/researchtopic/model/#JMTR_2301">Modeling</a>
+      <a href="https://yunqing-jia.github.io/JTRC/jmtr/researchtopic/optimization/#JMTR_2301">Optimization</a>
+      </td>
+      <td>Jan. 2023 - Apr. 2024</td>
+    </tr>
+    <tr class="success">
+      <td><a href="https://yunqing-jia.github.io/JTRC/jmtr/researchtopic/optimization/#JMTR_2204">
+      JMTR_2204</a></td>
+      <td>Robust Time-of-day Traffic Signal Control</td>
       <td>-</td>
+      <td>Apr. 2022 - Oct. 2022</td>
+    </tr>
+    <tr class="success">
+      <td><a href="https://yunqing-jia.github.io/JTRC/jmtr/researchtopic/aiml/#JMTR_2202">
+      JMTR_2202</a></td>
+      <td>Multiple Traffic Data Simultaneous Recovery</td>
+      <td>-</td>
+      <td>Feb. 2022 - Jul. 2023</td>
     </tr>
     <tr class="info">
-      <td>2</td>
-      <td>Traffic signal optimization</td>
-      <td><a href="#JMTR_2107">JMTR_2107</a></td>
-      <td><a href="#JMTR_2204">JMTR_2204</a></td>
+      <td>JMTR_2107</td>
+      <td>Traffic signal optimization for network-level intersections with contraflow left-turn lanes</td>
+      <td>-</td>
+      <td>Jul. 2021 - Jun. 2023</td>
     </tr>
-    <tr class="info">
-      <td> </td>
-      <td> </td>
-      <td>JMTR_2305</td>
-      <td><a href="https://yunqing-jia.github.io/JTRC/jmtr/thesis/#JMTR_2021">JMTR_2021</a></td>
-    </tr>
-    <tr class="info">
-      <td> </td>
-      <td> </td>
-      <td><a href="https://yunqing-jia.github.io/JTRC/jmts/experience/#jmts_2202">(JMTS_2202)</a></td>
-      <td><a href="#JMTR_2020">JMTR_2020</a></td>
-    </tr>
-    <tr class="info">
-      <td> </td>
-      <td> </td>
-      <td> </td>
-      <td><a href="#JMTR_2019">JMTR_2019</a></td>
+    <tr class="success">
+      <td>JMTR_2021</td>
+      <td>Sustainable Traffic Management and Control Strategy for Urban Intersections</td>
+      <td>-</td>
+      <td>Mar. 2021 - Jun. 2021</td>
     </tr>
   </tbody>
 </table>
-<a name="JMTR_2301"/>
-  
-## Research Program Description
-### I. Multi-modal mixed traffic flow modeling
-#### i. Joint optimization of connected bus trajectories & traffic signals (JMTR_2301) 
-
-<div class="container">
-    <div class="row">
-    <div class="col-md-9">
-          <img src="/JTRC/jmtr/mtfm_ind.png" class="center" width='900'>
-    </div>
-    </div>
-    <div class="row">
-    <div class="col-md-9">
-          <div class="intro">
-            Leveraging the advantages brought by the connected environment and fully integrating the macroscopic state of mixed traffic flow with the microscopic trajectories of connected buses, the connected bus speed and traffic signals can be integrated into macro-microscopic models of mixed traffic flow to capture traffic flow dynamics more accurately by treating connected buses as moving bottlenecks.
-          </div>
-    </div>
-    </div>
-</div>
-
 
 
 
