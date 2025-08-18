@@ -42,7 +42,7 @@ font-size:21px;
 </div>
 
 <a name="jmts_2403"/> 
-<br>
+<br><br><br>
 
 ### II. A linear programming solver via import-free simplex method
 
@@ -63,7 +63,7 @@ font-size:21px;
 </div>
 
 <a name="jmts_2404"/> 
-<br>
+<br><br><br>
 
 ### III. A visualizer of network shortest path
 
