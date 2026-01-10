@@ -68,7 +68,7 @@ font-size:21px;
 </div>
 
 <a name="jmts_1907"/>
-<br>
+<br><br><br>
 
 #### ii. Signalized roundabout design
 
@@ -90,7 +90,7 @@ font-size:21px;
 </div>
 
 <a name="jmts_1807"/>
-<br>
+<br><br><br>
 
 #### iii. Adaptive contraflow left-turn lane control
 
@@ -145,7 +145,7 @@ font-size:21px;
 </div>
 
 <a name="jmts_2110"/>
-<br>
+<br><br><br>
 
 #### ii. Airline crew scheduling model
 
@@ -166,7 +166,7 @@ font-size:21px;
 </div>
 
 <a name="jmts_2204"/>
-<br>
+<br><br><br>
 
 #### iii. AGV scheduling strategy based on improved A star algorithm in unmanned warehouse
 
@@ -187,7 +187,7 @@ font-size:21px;
 </div>
 
 <a name="jmts_1802"/>
-<br>
+<br><br><br>
 
 ### IV. Intelligent transportation system component
 

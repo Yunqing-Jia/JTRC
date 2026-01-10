@@ -11,12 +11,12 @@ font-size:21px;
 </style>
 
 <a name="JMTR_2301"/>
-<br>
+<br><br><br>
 
 ### i. Joint optimization of connected bus trajectories & traffic signals (JMTR_2301) 
 
 <a name="JMTR_2204"/>
-<br>
+<br><br><br>
 
 ### ii. Robust time-of-day traffic signal control (JMTR_2204) 
 
@@ -52,7 +52,7 @@ font-size:21px;
 </div>
 
 <a name="JMTR_2019"/> <a name="JMTR_2020"/> <a name="JMTR_2107"/> 
-<br>
+<br><br><br>
 
 ### iii. Optimization of contraflow left-turn lanes (JMTR_2107, JMTR_2020, JMTR_2019) 
 
@@ -207,6 +207,6 @@ font-size:21px;
 <!--## Headers-->
 
 <a name="JMTR_2021"/>
-<br>
+<br><br><br>
 
 ### iv. Sustainable traffic management and control strategy for urban intersections (JMTR_2021) 
