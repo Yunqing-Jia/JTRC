@@ -24,7 +24,7 @@ if (window !== window.top) {
 
 <ul style="list-style-type: disc; padding-left: 20px;">
   <li>JMOT_2505 (JMOI_2505A) Project powered by Leaflet & OpenStreetMap</li>
-  <li>Last modified on May, 2025</li>
+  <li>Last modified on Jan, 2026</li>
 </ul>
 
 <div class="btn-toolbar" role="toolbar">
